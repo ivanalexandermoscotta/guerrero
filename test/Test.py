@@ -4,7 +4,7 @@ import os
 import pathlib
 import time
 import abjadext.rmakers
-#from TaleaMusicMaker import TaleaMusicMaker
+# from TaleaMusicMaker import TaleaMusicMaker
 
 # Define the time signatures we would like to apply against the timespan structure.
 
@@ -414,6 +414,7 @@ all_timespan_lists = {
     'Voice 12': voice_12_timespan_list,
 }
 
+
 # Determine the "global" timespan of all voices combined:
 
 global_timespan = abjad.Timespan(
@@ -569,6 +570,20 @@ for voice in abjad.iterate(score['Staff Group']).components(abjad.Voice):
     for i, shard in enumerate(abjad.mutate(voice[:]).split(time_signatures)):
         time_signature = time_signatures[i]
         abjad.mutate(shard).rewrite_meter(time_signature)
+
+# semi-french score
+for staff in abjad.select(score['Staff Group']):
+    for selection in abjad.select(staff).components(abjad.Rest).group_by_contiguity():
+        start_command = abjad.LilyPondLiteral(
+            r'\stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff',
+            format_slot='before',
+            )
+        stop_command = abjad.LilyPondLiteral(
+            r'\stopStaff \startStaff',
+            format_slot='after',
+            )
+        abjad.attach(start_command, selection[0])
+        abjad.attach(stop_command, selection[-1])
 
 #attach instruments and clefs
 
