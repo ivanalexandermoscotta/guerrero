@@ -1,0 +1,23 @@
+Questions:
+
+1.) Best way to adjust spanbar in semi-cutaway score?
+
+2.) Make musicmaker class callable with timespans?
+
+3.) How to add a scheme pair in abjad?
+
+4.) rest consolidation?
+
+5.) splitting errors?
+
+Answers:
+
+1.) 
+
+2.) HALF ANSWER: make sure to pass in durations (durations = [timespan.duration for timespan in timespans])
+
+3.) use abjad.override(staff).bar_line.X_extent = abjad.SchemePair((-4, 4))
+
+4.) maybe I don’t need rest consolidation (solution: selected all rests not just multi-measure rests)
+
+5.) Trevor in progress
