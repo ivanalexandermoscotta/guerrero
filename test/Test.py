@@ -593,15 +593,58 @@ for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
         abjad.attach(start_command, selection[0])
         abjad.attach(stop_command, selection[-1])
 
-#attach instruments and clefs
-
-print('Adding attachments ...')
-
+# Make pitches
+print('Adding pitch material ...')
 def cyc(lst):
     count = 0
     while True:
         yield lst[count%len(lst)]
         count += 1
+
+range = range(24)
+
+sopranino_scale = [((i / 2) + 4) for i in range]
+soprano1_scale = [((i / 2) - 0) for i in range]
+soprano2_scale = [((i / 2) - 4) for i in range]
+alto1_scale = [((i / 2) - 8) for i in range]
+alto2_scale = [((i / 2) - 12) for i in range]
+alto3_scale = [((i / 2) - 16) for i in range]
+tenor1_scale = [((i / 2) - 20) for i in range]
+tenor2_scale = [((i / 2) - 24) for i in range]
+tenor3_scale = [((i / 2) - 26) for i in range]
+baritone1_scale = [((i / 2) - 28) for i in range]
+baritone2_scale = [((i / 2) - 32) for i in range]
+bass_scale = [((i / 2) - 36) for i in range]
+
+scales = [
+    sopranino_scale,
+    soprano1_scale,
+    soprano2_scale,
+    alto1_scale,
+    alto2_scale,
+    alto3_scale,
+    tenor1_scale,
+    tenor2_scale,
+    tenor3_scale,
+    baritone1_scale,
+    baritone2_scale,
+    bass_scale,
+]
+
+staffs = [abjad.iterate(score['Staff Group']).components(abjad.Staff)]
+
+for staff , scale in zip(staffs , scales):
+    leaves = [i for i in abjad.iterate(staff).logical_ties(pitched=True)]
+    pitches = cyc(scale)
+    for i , leaf in enumerate(leaves):
+        if leaf.is_pitched ==True:
+            pitch = next(pitches)
+            for note in leaf:
+                note.written_pitch = pitch
+
+#attach instruments and clefs
+
+print('Adding attachments ...')
 
 metro = abjad.MetronomeMark((1, 4), 90)
 
