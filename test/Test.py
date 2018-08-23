@@ -664,7 +664,7 @@ abjad.SegmentMaker.comment_measure_numbers(score)
 ###################
 
 #print(format(score_file))
-directory = '/Users/evansdsg2/Scores/guerrero'
+directory = '/Users/evansdsg2/Scores/guerrero/test'
 pdf_path = f'{directory}/Test.pdf'
 path = pathlib.Path('Test.pdf')
 if path.exists():
