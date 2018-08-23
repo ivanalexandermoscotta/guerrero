@@ -6,6 +6,8 @@ import time
 import abjadext.rmakers
 # from TaleaMusicMaker import TaleaMusicMaker
 
+print('Interpreting file ...')
+
 # Define the time signatures we would like to apply against the timespan structure.
 
 time_signatures = [
@@ -83,6 +85,7 @@ silence_maker = abjadext.rmakers.NoteRhythmMaker(
 # Define a small class so that we can annotate timespans with additional
 # information:
 
+print('Collecting voice timespans and rmakers ...')
 
 class MusicSpecifier:
 
@@ -510,6 +513,8 @@ for time_signature in time_signatures:
 # outputs a container. This helper function also adds LilyPond analysis
 # brackets to make it clearer where the phrase and sub-phrase boundaries are.
 
+print('Making containers ...')
+
 def make_container(rhythm_maker, durations):
     state=rhythm_maker.state
     selections = rhythm_maker(durations, previous_state=state)
@@ -565,11 +570,15 @@ for voice_name, timespan_list in all_timespan_lists.items():
         voice = score[voice_name]
         voice.append(container)
 
+print('Splitting and rewriting ...')
+
 # split and rewite meters
 for voice in abjad.iterate(score['Staff Group']).components(abjad.Voice):
     for i, shard in enumerate(abjad.mutate(voice[:]).split(time_signatures)):
         time_signature = time_signatures[i]
         abjad.mutate(shard).rewrite_meter(time_signature)
+
+print('Beautifying score ...')
 
 # semi-french score
 for staff in abjad.select(score['Staff Group']):
@@ -587,6 +596,8 @@ for staff in abjad.select(score['Staff Group']):
 
 #attach instruments and clefs
 
+print('Attaching indicators ...')
+
 def cyc(lst):
     count = 0
     while True:
@@ -594,6 +605,7 @@ def cyc(lst):
         count += 1
 
 metro = abjad.MetronomeMark((1, 4), 90)
+# segment_title = abjad.Markup("Invocation", direction=abjad.Up)
 
 instruments = cyc([
     abjad.SopraninoSaxophone(),
@@ -649,6 +661,7 @@ for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
 for staff in abjad.select(score['Staff Group']).components(abjad.Staff)[0]:
     leaf1 = abjad.select(staff).leaves()[0]
     abjad.attach(metro, leaf1)
+    # abjad.attach(segment_title, leaf1)
 
 for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
     abjad.Instrument.transpose_from_sounding_pitch(staff)
