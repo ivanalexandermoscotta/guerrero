@@ -4,7 +4,7 @@ import os
 import pathlib
 import time
 import abjadext.rmakers
-# from TaleaMusicMaker import TaleaMusicMaker
+#from TaleaMusicMaker import TaleaMusicMaker
 
 print('Interpreting file ...')
 
@@ -85,7 +85,6 @@ silence_maker = abjadext.rmakers.NoteRhythmMaker(
 # Define a small class so that we can annotate timespans with additional
 # information:
 
-print('Collecting voice timespans and rmakers ...')
 
 class MusicSpecifier:
 
@@ -98,6 +97,8 @@ class MusicSpecifier:
 # contain timespans explicitly representing silence. Here I make four, one
 # for each voice, using Python's list comprehension syntax to save some
 # space.
+
+print('Collecting timespans and rmakers ...')
 
 voice_1_timespan_list = abjad.TimespanList([
     abjad.AnnotatedTimespan(
@@ -417,7 +418,6 @@ all_timespan_lists = {
     'Voice 12': voice_12_timespan_list,
 }
 
-
 # Determine the "global" timespan of all voices combined:
 
 global_timespan = abjad.Timespan(
@@ -579,9 +579,8 @@ for voice in abjad.iterate(score['Staff Group']).components(abjad.Voice):
         abjad.mutate(shard).rewrite_meter(time_signature)
 
 print('Beautifying score ...')
-
-# semi-french score
-for staff in abjad.select(score['Staff Group']):
+# cutaway score
+for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
     for selection in abjad.select(staff).components(abjad.Rest).group_by_contiguity():
         start_command = abjad.LilyPondLiteral(
             r'\stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff',
@@ -596,7 +595,7 @@ for staff in abjad.select(score['Staff Group']):
 
 #attach instruments and clefs
 
-print('Attaching indicators ...')
+print('Adding attachments ...')
 
 def cyc(lst):
     count = 0
@@ -605,7 +604,6 @@ def cyc(lst):
         count += 1
 
 metro = abjad.MetronomeMark((1, 4), 90)
-# segment_title = abjad.Markup("Invocation", direction=abjad.Up)
 
 instruments = cyc([
     abjad.SopraninoSaxophone(),
@@ -661,7 +659,6 @@ for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
 for staff in abjad.select(score['Staff Group']).components(abjad.Staff)[0]:
     leaf1 = abjad.select(staff).leaves()[0]
     abjad.attach(metro, leaf1)
-    # abjad.attach(segment_title, leaf1)
 
 for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
     abjad.Instrument.transpose_from_sounding_pitch(staff)

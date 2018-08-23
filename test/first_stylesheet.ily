@@ -72,7 +72,6 @@
 		\remove Mark_engraver
         \accepts TimeSignatureContext
 		\override BarLine.bar-extent = #'(-2 . 2)
-		\override BarLine.X-extent = #'(-4 . 4)
         \override Beam.breakable = ##t
 		\override Glissando.breakable = ##t
         \override SpacingSpanner.strict-grace-spacing = ##t
