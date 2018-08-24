@@ -75,24 +75,24 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        e'16
+                        a'16
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        eqs'16
+                        aqs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        f'16
+                        as'16
                         ~
                         ]
-                        f'4
+                        as'4
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        fqs'8.
+                        bqf'8.
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        fs'16
+                        b'16
                         ]
                     }
                     {
@@ -105,23 +105,23 @@
                             % [Voice 1 measure 2] %! COMMENT_MEASURE_NUMBERS
                             r16
                             \stopStaff \startStaff
-                            gqf'4
+                            bqs'4
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g'16
+                            c''16
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            gqs'16
+                            cqs''16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            af'16
+                            cs''16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            aqf'16
+                            ctqs''16
                             ~
                             ]
-                            aqf'4
+                            ctqs''4
                         }
                     }
                     {
@@ -140,7 +140,7 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            a'8
+                            d''8
                             [
                             ]
                         }
@@ -155,28 +155,28 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        aqs'16
+                        dqs''16
                         ~
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        aqs'16
+                        dqs''16
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        bf'8.
+                        ds''8.
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        bf'16
+                        ds''16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        bqf'16
+                        eqf''16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        b'16
+                        e''16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        bqs'16
+                        eqs''16
                         ]
                     }
                     {
@@ -200,15 +200,15 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        c''8
+                        f''8
                         ~
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        c''8
+                        f''8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        cqs''8
+                        fqs''8
                         ]
                     }
                     {
@@ -221,7 +221,7 @@
                         \times 6/5 {
                             r4.
                             \stopStaff \startStaff
-                            cs''4
+                            fs''4
                         }
                     }
                     {
@@ -241,18 +241,18 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            dqf''8.
+                            ftqs''8.
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            d''16
+                            g''16
                             ~
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            d''16
+                            g''16
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            dqs''8.
+                            gqs''8.
                             ]
                         }
                     }
@@ -264,8 +264,8 @@
                     {
                         r4
                         \stopStaff \startStaff
-                        ef''4
-                        eqf''4
+                        gs''4
+                        gtqs''4
                     }
                 }
             }
@@ -294,10 +294,10 @@
                         % [Voice 2 measure 2] %! COMMENT_MEASURE_NUMBERS
                         \set stemLeftBeamCount = 0
                         \set stemRightBeamCount = 1
-                        e'8
+                        bf'8
                         [
                         ]
-                        eqs'4.
+                        bqf'4.
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -309,24 +309,24 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        f'16
+                        b'16
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        fqs'16
+                        bqs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        fs'16
+                        c''16
                         ]
-                        gqf'4
+                        cqs''4
                         ~
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        gqf'16
+                        cqs''16
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        g'8.
+                        cs''8.
                         ]
                     }
                     {
@@ -340,8 +340,8 @@
                     }
                     {
                         % [Voice 2 measure 5] %! COMMENT_MEASURE_NUMBERS
-                        gqs'4
-                        af'4
+                        ctqs''4
+                        d''4
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -355,23 +355,23 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            aqf'16
+                            dqs''16
                             ~
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            aqf'8.
+                            dqs''8.
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            a'16
+                            ds''16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            aqs'16
+                            eqf''16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            bf'16
+                            e''16
                             ]
-                            bqf'4
+                            eqs''4
                             ~
                         }
                     }
@@ -379,27 +379,27 @@
                         % [Voice 2 measure 7] %! COMMENT_MEASURE_NUMBERS
                         \set stemLeftBeamCount = 0
                         \set stemRightBeamCount = 2
-                        bqf'16
+                        eqs''16
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        b'8.
+                        f''8.
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        bqs'8
+                        fqs''8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        c''8
+                        fs''8
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        c''8
+                        fs''8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        cqs''16
+                        ftqs''16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        cs''16
+                        g''16
                         ]
                     }
                     {
@@ -414,7 +414,7 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            dqf''8
+                            gqs''8
                             ~
                             [
                             ]
@@ -422,7 +422,7 @@
                     }
                     {
                         % [Voice 2 measure 9] %! COMMENT_MEASURE_NUMBERS
-                        dqf''4
+                        gqs''4
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -436,21 +436,21 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            d''8
+                            gs''8
                             ~
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            d''8.
+                            gs''8.
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            dqs''8.
+                            aqf''8.
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            ef''8
+                            a''8
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            eqf''8
+                            aqs''8
                             ]
                         }
                     }
@@ -464,12 +464,12 @@
                         \times 4/3 {
                             r8
                             \stopStaff \startStaff
-                            e'4
+                            bf'4
                         }
                     }
                     {
                         % [Voice 2 measure 12] %! COMMENT_MEASURE_NUMBERS
-                        eqs'4
+                        bqf'4
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -500,24 +500,24 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        f'16
+                        fs'16
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        fqs'16
+                        ftqs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        fs'16
+                        g'16
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        gqf'8.
+                        gqs'8.
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        gqf'8
+                        gqs'8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        g'8
+                        gs'8
                         ]
                     }
                     {
@@ -531,7 +531,7 @@
                             % [Voice 3 measure 3] %! COMMENT_MEASURE_NUMBERS
                             r4
                             \stopStaff \startStaff
-                            gqs'4.
+                            aqf'4.
                         }
                     }
                     {
@@ -544,14 +544,14 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        af'8
+                        a'8
                         ~
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        af'8
+                        a'8
                         ]
-                        aqf'4.
+                        aqs'4.
                     }
                     {
                         % [Voice 3 measure 5] %! COMMENT_MEASURE_NUMBERS
@@ -566,23 +566,23 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            a'8
+                            bf'8
                             [
                             ]
-                            aqs'4
+                            bqf'4
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            bf'16
+                            b'16
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            bqf'16
+                            bqs'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            b'16
+                            c''16
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            bqs'8.
+                            cqs''8.
                             ]
                         }
                     }
@@ -593,11 +593,11 @@
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                             r8
                             \stopStaff \startStaff
-                            c''4
+                            cs''4
                             ~
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c''8
+                            cs''8
                             [
                             ]
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -614,29 +614,29 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        cqs''8
+                        ctqs''8
                         ~
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        cqs''16
+                        ctqs''16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        cs''16
+                        d''16
                         ~
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        cs''16
+                        d''16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        dqf''16
+                        dqs''16
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        dqf''8.
+                        dqs''8.
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        d''16
+                        ds''16
                         ]
                     }
                     {
@@ -651,28 +651,28 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            dqs''16
+                            eqf''16
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            ef''16
+                            e''16
                             ~
                             ]
-                            ef''4
+                            e''4
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            eqf''8.
+                            eqs''8.
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            e'16
+                            f''16
                             ~
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            e'16
+                            f''16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 0
-                            eqs'16
+                            fqs''16
                             ]
                         }
                     }
@@ -685,7 +685,7 @@
                         % [Voice 3 measure 12] %! COMMENT_MEASURE_NUMBERS
                         r4
                         \stopStaff \startStaff
-                        f'2
+                        fs'2
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -715,7 +715,7 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            fqs'8
+                            a'8
                             [
                             ]
                         }
@@ -731,12 +731,12 @@
                     {
                         r8
                         \stopStaff \startStaff
-                        fs'4.
+                        aqs'4.
                         ~
                     }
                     {
                         % [Voice 4 measure 3] %! COMMENT_MEASURE_NUMBERS
-                        fs'4
+                        aqs'4
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -748,24 +748,24 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        gqf'16
+                        as'16
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        g'16
+                        bqf'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        gqs'16
+                        b'16
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        af'8
+                        bqs'8
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        af'8.
+                        bqs'8.
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        aqf'16
+                        c''16
                         ]
                     }
                     {
@@ -782,7 +782,7 @@
                     }
                     {
                         % [Voice 4 measure 6] %! COMMENT_MEASURE_NUMBERS
-                        a'4
+                        cqs''4
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -798,15 +798,15 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            aqs'16
+                            cs''16
                             ~
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            aqs'16
+                            cs''16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            bf'16
+                            ctqs''16
                             ~
                         }
                     }
@@ -814,19 +814,19 @@
                         % [Voice 4 measure 8] %! COMMENT_MEASURE_NUMBERS
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        bf'8.
+                        ctqs''8.
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        bqf'16
+                        d''16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        b'16
+                        dqs''16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        bqs'16
+                        ds''16
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        c''8
+                        eqf''8
                         ]
                     }
                     {
@@ -844,25 +844,25 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            cqs''8.
+                            e''8.
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            cs''16
+                            eqs''16
                             ~
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            cs''16
+                            eqs''16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            dqf''16
+                            f''16
                             ~
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            dqf''8.
+                            f''8.
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 0
-                            d''16
+                            fqs''16
                             ]
                         }
                     }
@@ -876,14 +876,14 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        dqs''8
+                        fs''8
                         ~
                         [
                         ]
                     }
                     {
                         % [Voice 4 measure 11] %! COMMENT_MEASURE_NUMBERS
-                        dqs''2
+                        fs''2
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -898,25 +898,25 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        ef''16
+                        ftqs''16
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        eqf''8
+                        g''8
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        eqf''8.
+                        g''8.
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        e'16
+                        gqs''16
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        e'8
+                        gqs''8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        eqs'8
+                        gs''8
                         ]
                     }
                 }
@@ -951,11 +951,11 @@
                             \set stemRightBeamCount = 2
                             fs'16
                             ]
-                            gqf'4
+                            ftqs'4
                             ~
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            gqf'16
+                            ftqs'16
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 0
@@ -976,10 +976,10 @@
                         gqs'8
                         [
                         ]
-                        af'4
+                        gs'4
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        aqf'16
+                        gtqs'16
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
@@ -989,7 +989,7 @@
                         aqs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        bf'16
+                        as'16
                         ]
                     }
                     {
@@ -1073,7 +1073,7 @@
                         cs''8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        dqf''8
+                        ctqs''8
                         ]
                     }
                     {
@@ -1097,17 +1097,17 @@
                         dqs''16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        ef''16
+                        ds''16
                         ~
                         ]
-                        ef''4
+                        ds''4
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
                         eqf''8.
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        e'16
+                        e''16
                         ]
                     }
                     {
@@ -1120,7 +1120,7 @@
                         \times 6/5 {
                             r4.
                             \stopStaff \startStaff
-                            eqs'4
+                            eqs''4
                         }
                     }
                 }
@@ -1150,10 +1150,10 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 4/3 {
                             % [Voice 6 measure 2] %! COMMENT_MEASURE_NUMBERS
-                            f'4
+                            cs'4
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            fqs'8
+                            ctqs'8
                             [
                             ]
                         }
@@ -1168,23 +1168,23 @@
                             % [Voice 6 measure 3] %! COMMENT_MEASURE_NUMBERS
                             r16
                             \stopStaff \startStaff
-                            fs'4
+                            d'4
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            gqf'16
+                            dqs'16
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g'16
+                            ds'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            gqs'16
+                            eqf'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            af'16
+                            e'16
                             ~
                             ]
-                            af'4
+                            e'4
                         }
                     }
                     {
@@ -1202,10 +1202,10 @@
                             % [Voice 6 measure 5] %! COMMENT_MEASURE_NUMBERS
                             \set stemLeftBeamCount = 0
                             \set stemRightBeamCount = 1
-                            aqf'8
+                            eqs'8
                             [
                             ]
-                            a'4
+                            f'4
                         }
                     }
                     {
@@ -1218,28 +1218,28 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        aqs'16
+                        fqs'16
                         ~
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        aqs'16
+                        fqs'16
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        bf'8.
+                        fs'8.
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        bf'16
+                        fs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        bqf'16
+                        ftqs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        b'16
+                        g'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        bqs'16
+                        gqs'16
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
@@ -1247,24 +1247,24 @@
                             % [Voice 6 measure 7] %! COMMENT_MEASURE_NUMBERS
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c''8.
+                            gs'8.
                             ~
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c''8
+                            gs'8
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            cqs''8.
+                            gtqs'8.
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            cs''16
+                            a'16
                             ~
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            cs''16
+                            a'16
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            dqf''8.
+                            aqs'8.
                             ]
                         }
                     }
@@ -1276,11 +1276,11 @@
                     {
                         r4
                         \stopStaff \startStaff
-                        d''4
+                        as'4
                     }
                     {
                         % [Voice 6 measure 9] %! COMMENT_MEASURE_NUMBERS
-                        dqs''4
+                        bqf'4
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -1292,24 +1292,24 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        ef''16
+                        b'16
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        eqf''16
+                        bqs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        e'16
+                        c''16
                         ]
-                        eqs'4
+                        cqs''4
                         ~
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        eqs'16
+                        cqs''16
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        f'8.
+                        cs'8.
                         ]
                     }
                     {
@@ -1322,14 +1322,14 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        fqs'8
+                        ctqs'8
                         ~
                         [
                         ]
                     }
                     {
                         % [Voice 6 measure 12] %! COMMENT_MEASURE_NUMBERS
-                        fqs'4
+                        ctqs'4
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -1362,23 +1362,23 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            fs'16
+                            d'16
                             ~
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            fs'8.
+                            d'8.
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            gqf'16
+                            dqs'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g'16
+                            ds'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            gqs'16
+                            eqf'16
                             ]
-                            af'4
+                            e'4
                         }
                     }
                     {
@@ -1390,8 +1390,8 @@
                         % [Voice 7 measure 3] %! COMMENT_MEASURE_NUMBERS
                         r4
                         \stopStaff \startStaff
-                        aqf'4
-                        a'4
+                        eqs'4
+                        f'4
                     }
                     {
                         % [Voice 7 measure 4] %! COMMENT_MEASURE_NUMBERS
@@ -1403,7 +1403,7 @@
                         \times 6/5 {
                             r4
                             \stopStaff \startStaff
-                            aqs'4.
+                            fqs'4.
                         }
                     }
                     {
@@ -1417,24 +1417,24 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        bf'8.
+                        fs'8.
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        bqf'8
+                        ftqs'8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        b'8
+                        g'8
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        b'8
+                        g'8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        bqs'16
+                        gqs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        c''16
+                        gs'16
                         ]
                     }
                     {
@@ -1444,14 +1444,14 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        cqs''8
+                        aqf'8
                         ~
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        cqs''8
+                        aqf'8
                         ]
-                        cs''4.
+                        a'4.
                     }
                     {
                         % [Voice 7 measure 8] %! COMMENT_MEASURE_NUMBERS
@@ -1466,21 +1466,21 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            dqf''8
+                            aqs'8
                             ~
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            dqf''8.
+                            aqs'8.
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            d''8.
+                            bf'8.
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            dqs''8
+                            bqf'8
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            ef''8
+                            b'8
                             ]
                         }
                     }
@@ -1494,24 +1494,24 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        eqf''16
+                        bqs'16
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        e'16
+                        c''16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        eqs'16
+                        cqs''16
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        f'8.
+                        cs''8.
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        f'8
+                        cs''8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        fqs'8
+                        ctqs''8
                         ]
                     }
                     {
@@ -1525,11 +1525,11 @@
                             % [Voice 7 measure 12] %! COMMENT_MEASURE_NUMBERS
                             r8
                             \stopStaff \startStaff
-                            fs'4
+                            d'4
                             ~
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            fs'8
+                            d'8
                             [
                             ]
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -1559,7 +1559,7 @@
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r4
                         \stopStaff \startStaff
-                        gqf'2
+                        bf2
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -1578,7 +1578,7 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        g'8
+                        bqf8
                         [
                         ]
                     }
@@ -1594,23 +1594,23 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            gqs'8
+                            b8
                             [
                             ]
-                            af'4
+                            bqs4
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            aqf'16
+                            c'16
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            a'16
+                            cqs'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            aqs'16
+                            cs'16
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            bf'8.
+                            ctqs'8.
                             ]
                         }
                     }
@@ -1627,13 +1627,13 @@
                         \times 4/3 {
                             r8
                             \stopStaff \startStaff
-                            bqf'4
+                            d'4
                             ~
                         }
                     }
                     {
                         % [Voice 8 measure 6] %! COMMENT_MEASURE_NUMBERS
-                        bqf'4
+                        d'4
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -1648,7 +1648,7 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        b'8
+                        dqs'8
                         ~
                         [
                     }
@@ -1657,19 +1657,19 @@
                             % [Voice 8 measure 8] %! COMMENT_MEASURE_NUMBERS
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            b'16
+                            dqs'16
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            bqs'8
+                            ds'8
                             ]
-                            c''4
+                            eqf'4
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            cqs''16
+                            e'16
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 0
-                            cs''16
+                            eqs'16
                             ]
                         }
                     }
@@ -1686,29 +1686,29 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        dqf''8.
+                        f'8.
                         ~
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        dqf''8
+                        f'8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        d''8
+                        fqs'8
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        d''16
+                        fqs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        dqs''16
+                        fs'16
                         ~
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        dqs''16
+                        fs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        ef''16
+                        ftqs'16
                         ]
                     }
                     {
@@ -1722,13 +1722,13 @@
                     }
                     {
                         % [Voice 8 measure 11] %! COMMENT_MEASURE_NUMBERS
-                        eqf''4
+                        g'4
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r8
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        e'8
+                        gqs'8
                         [
                         ]
                     }
@@ -1747,23 +1747,23 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            eqs'16
+                            gs'16
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16
+                            aqf'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            fqs'16
+                            a'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            fs'16
+                            aqs'16
                             ~
                             ]
-                            fs'4
+                            aqs'4
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            gqf'8
+                            bf8
                             [
                             ]
                         }
@@ -1789,31 +1789,31 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        g'16
+                        gs16
                         ~
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        g'16
+                        gs16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        gqs'16
+                        aqf16
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        gqs'8.
+                        aqf8.
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        af'16
+                        a16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        aqf'16
+                        aqs16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        a'16
+                        bf16
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        aqs'8
+                        bqf8
                         ]
                     }
                     {
@@ -1828,25 +1828,25 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            bf'8.
+                            b8.
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            bqf'16
+                            bqs16
                             ~
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            bqf'16
+                            bqs16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            b'16
+                            c'16
                             ~
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            b'8.
+                            c'8.
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 0
-                            bqs'16
+                            cqs'16
                             ]
                         }
                     }
@@ -1864,7 +1864,7 @@
                             % [Voice 9 measure 4] %! COMMENT_MEASURE_NUMBERS
                             r8
                             \stopStaff \startStaff
-                            c''2
+                            cs'2
                         }
                     }
                     {
@@ -1877,25 +1877,25 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        cqs''16
+                        ctqs'16
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        cs''8
+                        d'8
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        cs''8.
+                        d'8.
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        dqf''16
+                        dqs'16
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        dqf''8
+                        dqs'8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        d''8
+                        ds'8
                         ]
                     }
                     {
@@ -1917,7 +1917,7 @@
                     {
                         r2
                         \stopStaff \startStaff
-                        dqs''4
+                        eqf'4
                     }
                     {
                         % [Voice 9 measure 9] %! COMMENT_MEASURE_NUMBERS
@@ -1931,7 +1931,7 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            ef''8
+                            e'8
                             [
                             ]
                         }
@@ -1952,24 +1952,24 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            eqf''16
-                            [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            e'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
                             eqs'16
-                            ]
-                            f'4
-                            ~
+                            [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f'16
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            fqs'16
+                            ]
+                            fs'4
+                            ~
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            fs'16
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 0
-                            fqs'16
+                            ftqs'16
                             ]
                         }
                     }
@@ -1983,15 +1983,15 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        fs'8
+                        g'8
                         ~
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        fs'8
+                        g'8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        gqf'8
+                        gqs'8
                         ]
                     }
                 }
@@ -2019,8 +2019,8 @@
                     }
                     {
                         % [Voice 10 measure 2] %! COMMENT_MEASURE_NUMBERS
-                        g'4
-                        gqs'4
+                        cs'4
+                        ctqs'4
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -2032,23 +2032,23 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        af'8
+                        d'8
                         [
                         ]
-                        aqf'4
+                        dqs'4
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        a'16
+                        ds'16
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        aqs'16
+                        eqf'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        bf'16
+                        e'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        bqf'16
+                        eqs'16
                         ]
                     }
                     {
@@ -2063,10 +2063,10 @@
                         % [Voice 10 measure 5] %! COMMENT_MEASURE_NUMBERS
                         r8
                         \stopStaff \startStaff
-                        b'4
+                        f'4
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        bqs'8
+                        fqs'8
                         [
                         ]
                     }
@@ -2082,40 +2082,40 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c''8.
+                            fs'8.
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            cqs''8
+                            ftqs'8
                             ]
-                            cs''4
+                            g'4
                         }
                     }
                     {
                         % [Voice 10 measure 7] %! COMMENT_MEASURE_NUMBERS
                         \set stemLeftBeamCount = 0
                         \set stemRightBeamCount = 2
-                        dqf''16
+                        gqs'16
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        d''16
+                        gs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        dqs''16
+                        gtqs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        ef''16
+                        a'16
                         ~
                         ]
-                        ef''4
+                        a'4
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        eqf''8.
+                        aqs'8.
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        e'16
+                        as'16
                         ]
                     }
                     {
@@ -2129,7 +2129,7 @@
                     }
                     {
                         % [Voice 10 measure 9] %! COMMENT_MEASURE_NUMBERS
-                        eqs'4
+                        bqf'4
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -2141,23 +2141,23 @@
                             % [Voice 10 measure 10] %! COMMENT_MEASURE_NUMBERS
                             r16
                             \stopStaff \startStaff
-                            f'4
+                            b'4
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            fqs'16
+                            bqs'16
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            fs'16
+                            c''16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            gqf'16
+                            cqs''16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g'16
+                            cs'16
                             ~
                             ]
-                            g'4
+                            cs'4
                         }
                     }
                     {
@@ -2172,7 +2172,7 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            gqs'8
+                            ctqs'8
                             ~
                             [
                         }
@@ -2181,10 +2181,10 @@
                         % [Voice 10 measure 12] %! COMMENT_MEASURE_NUMBERS
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        gqs'8
+                        ctqs'8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        af'8
+                        d'8
                         ]
                     }
                     {
@@ -2216,28 +2216,28 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        aqf'16
+                        a16
                         ~
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        aqf'16
+                        a16
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        a'8.
+                        aqs8.
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        a'16
+                        aqs16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        aqs'16
+                        as16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        bf'16
+                        bqf16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        bqf'16
+                        b16
                         ]
                     }
                     {
@@ -2251,7 +2251,7 @@
                             % [Voice 11 measure 3] %! COMMENT_MEASURE_NUMBERS
                             r4.
                             \stopStaff \startStaff
-                            b'4
+                            bqs4
                         }
                     }
                     {
@@ -2262,8 +2262,8 @@
                     {
                         r4
                         \stopStaff \startStaff
-                        bqs'4
-                        c''4
+                        c'4
+                        cqs'4
                     }
                     {
                         % [Voice 11 measure 5] %! COMMENT_MEASURE_NUMBERS
@@ -2279,18 +2279,18 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            cqs''8.
+                            cs'8.
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
-                            cs''16
+                            ctqs'16
                             ~
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            cs''16
+                            ctqs'16
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            dqf''8.
+                            d'8.
                             ]
                         }
                     }
@@ -2301,7 +2301,7 @@
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                             r4
                             \stopStaff \startStaff
-                            d''4.
+                            dqs'4.
                         }
                     }
                     {
@@ -2315,24 +2315,24 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        dqs''16
+                        ds'16
                         [
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        ef''16
+                        eqf'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        eqf''16
+                        e'16
                         ]
-                        e'4
+                        eqs'4
                         ~
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        e'16
+                        eqs'16
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        eqs'8.
+                        f'8.
                         ]
                     }
                     {
@@ -2347,23 +2347,23 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            f'16
+                            fqs'16
                             ~
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            f'8.
+                            fqs'8.
                             \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 2
-                            fqs'16
-                            \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             fs'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            gqf'16
+                            ftqs'16
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            g'16
                             ]
-                            g'4
+                            gqs'4
                         }
                     }
                     {
@@ -2377,14 +2377,14 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        gqs'8
+                        gs'8
                         ~
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        gqs'8
+                        gs'8
                         ]
-                        af'4.
+                        gtqs'4.
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -2412,11 +2412,11 @@
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                             r8
                             \stopStaff \startStaff
-                            aqf'4
+                            bf4
                             ~
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            aqf'8
+                            bf8
                             [
                             ]
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -2433,12 +2433,12 @@
                     {
                         r4
                         \stopStaff \startStaff
-                        a'4
+                        bqf4
                         ~
                     }
                     {
                         % [Voice 12 measure 3] %! COMMENT_MEASURE_NUMBERS
-                        a'4
+                        bqf4
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -2450,24 +2450,24 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        aqs'8.
+                        b8.
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        bf'8
+                        bqs8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        bqf'8
+                        c'8
                         ~
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        bqf'8
+                        c'8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        b'16
+                        cqs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 0
-                        bqs'16
+                        cs'16
                         ]
                     }
                     {
@@ -2481,7 +2481,7 @@
                     {
                         r8
                         \stopStaff \startStaff
-                        c''4.
+                        ctqs'4.
                     }
                     {
                         % [Voice 12 measure 6] %! COMMENT_MEASURE_NUMBERS
@@ -2499,7 +2499,7 @@
                         \times 4/5 {
                             r16
                             \stopStaff \startStaff
-                            cqs''4
+                            d'4
                             ~
                         }
                     }
@@ -2507,17 +2507,17 @@
                         % [Voice 12 measure 8] %! COMMENT_MEASURE_NUMBERS
                         \set stemLeftBeamCount = 0
                         \set stemRightBeamCount = 2
-                        cqs''16
+                        d'16
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        cs''8.
+                        dqs'8.
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        dqf''8
+                        ds'8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        d''8
+                        eqf'8
                         ]
                     }
                     {
@@ -2535,24 +2535,24 @@
                             \stopStaff \startStaff
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            dqs''16
+                            e'16
                             [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            ef''16
+                            eqs'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            eqf''16
+                            f'16
                             ]
-                            e'4
+                            fqs'4
                             ~
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            e'16
+                            fqs'16
                             [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 0
-                            eqs'8.
+                            fs'8.
                             ]
                         }
                     }
@@ -2567,7 +2567,7 @@
                     }
                     {
                         % [Voice 12 measure 11] %! COMMENT_MEASURE_NUMBERS
-                        f'2
+                        ftqs'2
                     }
                     {
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
@@ -2582,24 +2582,24 @@
                         \stopStaff \startStaff
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        fqs'8
+                        g'8
                         ~
                         [
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 1
-                        fqs'8
+                        g'8
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 2
-                        fs'16
+                        gqs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 2
-                        gqf'16
+                        gs'16
                         \set stemLeftBeamCount = 2
                         \set stemRightBeamCount = 1
-                        g'16
+                        aqf'16
                         \set stemLeftBeamCount = 1
                         \set stemRightBeamCount = 0
-                        gqs'8.
+                        a'8.
                         ]
                     }
                 }

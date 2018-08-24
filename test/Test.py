@@ -601,20 +601,20 @@ def cyc(lst):
         yield lst[count%len(lst)]
         count += 1
 
-range = range(24)
+scale = range(24)
 
-sopranino_scale = [((i / 2) + 4) for i in range]
-soprano1_scale = [((i / 2) - 0) for i in range]
-soprano2_scale = [((i / 2) - 4) for i in range]
-alto1_scale = [((i / 2) - 8) for i in range]
-alto2_scale = [((i / 2) - 12) for i in range]
-alto3_scale = [((i / 2) - 16) for i in range]
-tenor1_scale = [((i / 2) - 20) for i in range]
-tenor2_scale = [((i / 2) - 24) for i in range]
-tenor3_scale = [((i / 2) - 26) for i in range]
-baritone1_scale = [((i / 2) - 28) for i in range]
-baritone2_scale = [((i / 2) - 32) for i in range]
-bass_scale = [((i / 2) - 36) for i in range]
+sopranino_scale = [((i / 2) + 12) for i in scale]
+soprano1_scale = [((i / 2) + 8) for i in scale]
+soprano2_scale = [((i / 2) + 4) for i in scale]
+alto1_scale = [((i / 2) - 0) for i in scale]
+alto2_scale = [((i / 2) - 4) for i in scale]
+alto3_scale = [((i / 2) - 8) for i in scale]
+tenor1_scale = [((i / 2) - 12) for i in scale]
+tenor2_scale = [((i / 2) - 16) for i in scale]
+tenor3_scale = [((i / 2) - 18) for i in scale]
+baritone1_scale = [((i / 2) - 20) for i in scale]
+baritone2_scale = [((i / 2) - 24) for i in scale]
+bass_scale = [((i / 2) - 28) for i in scale]
 
 scales = [
     sopranino_scale,
@@ -631,15 +631,15 @@ scales = [
     bass_scale,
 ]
 
-staffs = [abjad.iterate(score['Staff Group']).components(abjad.Staff)]
+staffs = [staff for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff)]
 
 for staff , scale in zip(staffs , scales):
-    leaves = [i for i in abjad.iterate(staff).logical_ties(pitched=True)]
+    logicl_ties = [i for i in abjad.iterate(staff).logical_ties(pitched=True)]
     pitches = cyc(scale)
-    for i , leaf in enumerate(leaves):
-        if leaf.is_pitched ==True:
+    for i , logicl_tie in enumerate(logicl_ties):
+        if logicl_tie.is_pitched ==True:
             pitch = next(pitches)
-            for note in leaf:
+            for note in logicl_tie:
                 note.written_pitch = pitch
 
 #attach instruments and clefs
@@ -703,8 +703,8 @@ for staff in abjad.select(score['Staff Group']).components(abjad.Staff)[0]:
     leaf1 = abjad.select(staff).leaves()[0]
     abjad.attach(metro, leaf1)
 
-# for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
-#     abjad.Instrument.transpose_from_sounding_pitch(staff)
+for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
+    abjad.Instrument.transpose_from_sounding_pitch(staff)
 
 # Make a lilypond file and show it:
 
