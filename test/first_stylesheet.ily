@@ -73,6 +73,7 @@
         \accepts TimeSignatureContext
 		\override BarLine.bar-extent = #'(-2 . 2)
         \override Beam.breakable = ##t
+		\override Beam.concaveness = #10000
 		\override Glissando.breakable = ##t
         \override SpacingSpanner.strict-grace-spacing = ##t
         \override SpacingSpanner.strict-note-spacing = ##t

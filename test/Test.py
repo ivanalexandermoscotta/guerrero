@@ -703,8 +703,8 @@ for staff in abjad.select(score['Staff Group']).components(abjad.Staff)[0]:
     leaf1 = abjad.select(staff).leaves()[0]
     abjad.attach(metro, leaf1)
 
-for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
-    abjad.Instrument.transpose_from_sounding_pitch(staff)
+# for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
+#     abjad.Instrument.transpose_from_sounding_pitch(staff)
 
 # Make a lilypond file and show it:
 
