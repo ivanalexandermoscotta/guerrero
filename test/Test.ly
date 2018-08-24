@@ -18,6 +18,12 @@
         {
             % [Global Context measure 1] %! COMMENT_MEASURE_NUMBERS
             \time 5/4
+            \mark \markup {
+                \bold
+                    {
+                        Invocation
+                    }
+                }
             s1 * 5/4
             % [Global Context measure 2] %! COMMENT_MEASURE_NUMBERS
             \time 4/4
@@ -266,6 +272,7 @@
                         \stopStaff \startStaff
                         cs'''4
                         ctqs'''4
+                        \bar "||"
                     }
                 }
             }

@@ -645,8 +645,10 @@ for staff , scale in zip(staffs , scales):
 #attach instruments and clefs
 
 print('Adding attachments ...')
-
+bar_line = abjad.BarLine('||')
 metro = abjad.MetronomeMark((1, 4), 90)
+markup = abjad.Markup(r'\bold { Invocation }')
+mark = abjad.RehearsalMark(markup=markup)
 
 instruments = cyc([
     abjad.SopraninoSaxophone(),
@@ -701,7 +703,13 @@ for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
 
 for staff in abjad.select(score['Staff Group']).components(abjad.Staff)[0]:
     leaf1 = abjad.select(staff).leaves()[0]
+    last_leaf = abjad.select(staff).leaves()[-1]
     abjad.attach(metro, leaf1)
+    abjad.attach(bar_line, last_leaf)
+
+for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
+    leaf1 = abjad.select(staff).leaves()[0]
+    abjad.attach(mark, leaf1)
 
 for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
     abjad.Instrument.transpose_from_sounding_pitch(staff)
