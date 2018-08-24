@@ -723,29 +723,29 @@ score_file = abjad.LilyPondFile.new(
 # Comment measure numbers
 abjad.SegmentMaker.comment_measure_numbers(score)
 ###################
-#
-# #print(format(score_file))
-# directory = '/Users/evansdsg2/Scores/guerrero/Segments/Invocation'
-# pdf_path = f'{directory}/Invocation.pdf'
-# path = pathlib.Path('Invocation.pdf')
-# if path.exists():
-#     print(f'Removing {pdf_path} ...')
-#     path.unlink()
-# time_1 = time.time()
-# print(f'Persisting {pdf_path} ...')
-# result = abjad.persist(score_file).as_pdf(pdf_path)
-# print(result[0])
-# print(result[1])
-# print(result[2])
-# success = result[3]
-# if success is False:
-#         print('LilyPond failed!')
-# time_2 = time.time()
-# total_time = time_2 - time_1
-# print(f'Total time: {total_time} seconds')
-# if path.exists():
-#     print(f'Opening {pdf_path} ...')
-#     os.system(f'open {pdf_path}')
+
+#print(format(score_file))
+directory = '/Users/evansdsg2/Scores/guerrero/Segments/Invocation'
+pdf_path = f'{directory}/Invocation.pdf'
+path = pathlib.Path('Invocation.pdf')
+if path.exists():
+    print(f'Removing {pdf_path} ...')
+    path.unlink()
+time_1 = time.time()
+print(f'Persisting {pdf_path} ...')
+result = abjad.persist(score_file).as_pdf(pdf_path)
+print(result[0])
+print(result[1])
+print(result[2])
+success = result[3]
+if success is False:
+        print('LilyPond failed!')
+time_2 = time.time()
+total_time = time_2 - time_1
+print(f'Total time: {total_time} seconds')
+if path.exists():
+    print(f'Opening {pdf_path} ...')
+    os.system(f'open {pdf_path}')
 
 # abjad.show(score)
-abjad.play(score)
+# abjad.play(score)
