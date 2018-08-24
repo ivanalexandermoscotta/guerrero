@@ -116,8 +116,8 @@ class TaleaMusicMaker:
     #         leaves = abjad.select(shard).leaves()
     #         if not all(isinstance(_, abjad.Rest) for _ in leaves):
     #             beam_specifier([shard])
-    #         measure = abjad.Measure(time_signature_pairs[i])
-    #         abjad.mutate(shard).wrap(measure)
+    #         container = abjad.Container(time_signature_pairs[i])
+    #         abjad.mutate(shard).wrap(container)
     #     # music = self.add_attachments(music)
 
         return music
