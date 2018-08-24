@@ -603,18 +603,18 @@ def cyc(lst):
 
 scale = range(24)
 
-sopranino_scale = [((i / 2) + 12) for i in scale]
-soprano1_scale = [((i / 2) + 8) for i in scale]
-soprano2_scale = [((i / 2) + 4) for i in scale]
-alto1_scale = [((i / 2) - 0) for i in scale]
-alto2_scale = [((i / 2) - 4) for i in scale]
-alto3_scale = [((i / 2) - 8) for i in scale]
-tenor1_scale = [((i / 2) - 12) for i in scale]
-tenor2_scale = [((i / 2) - 16) for i in scale]
-tenor3_scale = [((i / 2) - 18) for i in scale]
-baritone1_scale = [((i / 2) - 20) for i in scale]
-baritone2_scale = [((i / 2) - 24) for i in scale]
-bass_scale = [((i / 2) - 28) for i in scale]
+sopranino_scale = [((i / 2) + 17) for i in scale]
+soprano1_scale = [((i / 2) + 13) for i in scale]
+soprano2_scale = [((i / 2) + 9) for i in scale]
+alto1_scale = [((i / 2) + 5) for i in scale]
+alto2_scale = [((i / 2) + 1) for i in scale]
+alto3_scale = [((i / 2) - 3) for i in scale]
+tenor1_scale = [((i / 2) - 7) for i in scale]
+tenor2_scale = [((i / 2) - 11) for i in scale]
+tenor3_scale = [((i / 2) - 15) for i in scale]
+baritone1_scale = [((i / 2) - 19) for i in scale]
+baritone2_scale = [((i / 2) - 23) for i in scale]
+bass_scale = [((i / 2) - 27) for i in scale]
 
 scales = [
     sopranino_scale,
