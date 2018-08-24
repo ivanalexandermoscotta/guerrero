@@ -75,7 +75,7 @@
                         \markup { spro. }
                         \set Staff.instrumentName =
                         \markup { Sopranino }
-                        \tempo 4=90
+                        \tempo 4=60
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         r16
                         \stopStaff \startStaff
