@@ -1,2 +1,2 @@
 # Guerrero
-for 12 saxophones (2018)
+for 16 saxophones (2018)

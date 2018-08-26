@@ -163,6 +163,27 @@ voice_9_timespan_list = abjad.TimespanList([
     ]
 ])
 
+voice_13_timespan_list = abjad.TimespanList([
+    abjad.AnnotatedTimespan(
+        start_offset=start_offset,
+        stop_offset=stop_offset,
+        annotation=MusicSpecifier(
+            rhythm_maker=rhythm_maker,
+            voice_name='Voice 13',
+        ),
+    )
+    for start_offset, stop_offset, rhythm_maker in [
+        [(0, 4), (3, 4), rmaker_one],
+        [(5, 4), (8, 4), rmaker_one],
+        [(12, 4), (15, 4), rmaker_two],
+        [(17, 4), (20, 4), rmaker_one],
+        [(28, 4), (31, 4), rmaker_two],
+        [(33, 4), (36, 4), rmaker_two],
+        [(40, 4), (43, 4), rmaker_one],
+        [(45, 4), (48, 4), rmaker_two],
+    ]
+])
+
 voice_2_timespan_list = abjad.TimespanList([
     abjad.AnnotatedTimespan(
         start_offset=start_offset,
@@ -250,6 +271,35 @@ voice_10_timespan_list = abjad.TimespanList([
     ]
 ])
 
+voice_14_timespan_list = abjad.TimespanList([
+    abjad.AnnotatedTimespan(
+        start_offset=start_offset,
+        stop_offset=stop_offset,
+        annotation=MusicSpecifier(
+            rhythm_maker=rhythm_maker,
+            voice_name='Voice 14',
+        ),
+    )
+    for start_offset, stop_offset, rhythm_maker in [
+        # [(4, 4), (7, 4), rmaker_two],#
+        [(4, 4), (5, 4), rmaker_two],#
+        [(5, 4), (7, 4), rmaker_two],#
+        [(9, 4), (12, 4), rmaker_one],
+        # [(16, 4), (19, 4), rmaker_two],#
+        [(16, 4), (17, 4), rmaker_two],#
+        [(17, 4), (19, 4), rmaker_two],#
+        [(21, 4), (24, 4), rmaker_one],
+        [(24, 4), (27, 4), rmaker_one],
+        # [(29, 4), (32, 4), rmaker_two],#
+        [(29, 4), (31, 4), rmaker_two],#
+        [(31, 4), (32, 4), rmaker_two],#
+        [(36, 4), (39, 4), rmaker_one],
+        # [(41, 4), (44, 4), rmaker_two],#
+        [(41, 4), (43, 4), rmaker_two],#
+        [(43, 4), (44, 4), rmaker_two],#
+    ]
+])
+
 voice_3_timespan_list = abjad.TimespanList([
     abjad.AnnotatedTimespan(
         start_offset=start_offset,
@@ -299,6 +349,27 @@ voice_11_timespan_list = abjad.TimespanList([
         annotation=MusicSpecifier(
             rhythm_maker=rhythm_maker,
             voice_name='Voice 11',
+        ),
+    )
+    for start_offset, stop_offset, rhythm_maker in [
+        [(2, 4), (5, 4), rmaker_one],
+        [(9, 4), (12, 4), rmaker_two],
+        [(14, 4), (17, 4), rmaker_two],
+        [(21, 4), (24, 4), rmaker_one],
+        [(24, 4), (27, 4), rmaker_two],
+        [(31, 4), (34, 4), rmaker_one],
+        [(36, 4), (39, 4), rmaker_one],
+        [(43, 4), (46, 4), rmaker_two],
+    ]
+])
+
+voice_15_timespan_list = abjad.TimespanList([
+    abjad.AnnotatedTimespan(
+        start_offset=start_offset,
+        stop_offset=stop_offset,
+        annotation=MusicSpecifier(
+            rhythm_maker=rhythm_maker,
+            voice_name='Voice 15',
         ),
     )
     for start_offset, stop_offset, rhythm_maker in [
@@ -400,6 +471,35 @@ voice_12_timespan_list = abjad.TimespanList([
     ]
 ])
 
+voice_16_timespan_list = abjad.TimespanList([
+    abjad.AnnotatedTimespan(
+        start_offset=start_offset,
+        stop_offset=stop_offset,
+        annotation=MusicSpecifier(
+            rhythm_maker=rhythm_maker,
+            voice_name='Voice 16',
+        ),
+    )
+    for start_offset, stop_offset, rhythm_maker in [
+        [(0, 4), (3, 4), rmaker_two],
+        # [(7, 4), (10, 4), rmaker_two],#
+        [(7, 4), (9, 4), rmaker_two],#
+        [(9, 4), (10, 4), rmaker_two],#
+        [(12, 4), (15, 4), rmaker_one],
+        # [(19, 4), (22, 4), rmaker_two],#
+        [(19, 4), (21, 4), rmaker_two],#
+        [(21, 4), (22, 4), rmaker_two],#
+        # [(26, 4), (29, 4), rmaker_one],#
+        [(26, 4), (27, 4), rmaker_one],#
+        [(27, 4), (29, 4), rmaker_one],#
+        [(33, 4), (36, 4), rmaker_one],
+        # [(38, 4), (41, 4), rmaker_two],#
+        [(38, 4), (39, 4), rmaker_two],#
+        [(39, 4), (41, 4), rmaker_two],#
+        [(45, 4), (48, 4), rmaker_one],
+    ]
+])
+
 # Create a dictionary mapping voice names to timespan lists so we can
 # maintain the association in later operations:
 
@@ -416,6 +516,10 @@ all_timespan_lists = {
     'Voice 10': voice_10_timespan_list,
     'Voice 11': voice_11_timespan_list,
     'Voice 12': voice_12_timespan_list,
+    'Voice 13': voice_13_timespan_list,
+    'Voice 14': voice_14_timespan_list,
+    'Voice 15': voice_15_timespan_list,
+    'Voice 16': voice_16_timespan_list,
 }
 
 # Determine the "global" timespan of all voices combined:
@@ -491,6 +595,10 @@ score = abjad.Score([
             abjad.Staff([abjad.Voice(name='Voice 10')],name='Staff 10', lilypond_type='Staff',),
             abjad.Staff([abjad.Voice(name='Voice 11')],name='Staff 11', lilypond_type='Staff',),
             abjad.Staff([abjad.Voice(name='Voice 12')],name='Staff 12', lilypond_type='Staff',),
+            abjad.Staff([abjad.Voice(name='Voice 13')],name='Staff 13', lilypond_type='Staff',),
+            abjad.Staff([abjad.Voice(name='Voice 14')],name='Staff 14', lilypond_type='Staff',),
+            abjad.Staff([abjad.Voice(name='Voice 15')],name='Staff 15', lilypond_type='Staff',),
+            abjad.Staff([abjad.Voice(name='Voice 16')],name='Staff 16', lilypond_type='Staff',),
         ],
         name='Staff Group',
     )
@@ -606,6 +714,7 @@ scale = range(24)
 sopranino_scale = [((i / 2) + 17) for i in scale]
 soprano1_scale = [((i / 2) + 13) for i in scale]
 soprano2_scale = [((i / 2) + 9) for i in scale]
+soprano3_scale = [((i / 2) + 9) for i in scale]
 alto1_scale = [((i / 2) + 5) for i in scale]
 alto2_scale = [((i / 2) + 1) for i in scale]
 alto3_scale = [((i / 2) - 3) for i in scale]
@@ -614,12 +723,16 @@ tenor2_scale = [((i / 2) - 11) for i in scale]
 tenor3_scale = [((i / 2) - 15) for i in scale]
 baritone1_scale = [((i / 2) - 19) for i in scale]
 baritone2_scale = [((i / 2) - 23) for i in scale]
-bass_scale = [((i / 2) - 27) for i in scale]
+baritone3_scale = [((i / 2) - 23) for i in scale]
+bass_scale1 = [((i / 2) - 27) for i in scale]
+bass_scale2 = [((i / 2) - 27) for i in scale]
+contrabass_scale = [((i / 2) - 27) for i in scale]
 
 scales = [
     sopranino_scale,
     soprano1_scale,
     soprano2_scale,
+    soprano3_scale,
     alto1_scale,
     alto2_scale,
     alto3_scale,
@@ -628,7 +741,10 @@ scales = [
     tenor3_scale,
     baritone1_scale,
     baritone2_scale,
-    bass_scale,
+    baritone3_scale,
+    bass_scale1,
+    bass_scale2,
+    contrabass_scale,
 ]
 
 staffs = [staff for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff)]
@@ -654,21 +770,26 @@ instruments = cyc([
     abjad.SopraninoSaxophone(),
     abjad.SopranoSaxophone(),
     abjad.SopranoSaxophone(),
+    abjad.SopranoSaxophone(),
     abjad.AltoSaxophone(),
     abjad.AltoSaxophone(),
     abjad.AltoSaxophone(),
     abjad.TenorSaxophone(),
     abjad.TenorSaxophone(),
     abjad.TenorSaxophone(),
+    abjad.BaritoneSaxophone(),
     abjad.BaritoneSaxophone(),
     abjad.BaritoneSaxophone(),
     abjad.BassSaxophone(),
+    abjad.BassSaxophone(),
+    abjad.ContrabassSaxophone(),
 ])
 
 abbreviations = cyc([
     abjad.MarginMarkup(markup=abjad.Markup('spro.'),),
     abjad.MarginMarkup(markup=abjad.Markup('spr.1'),),
     abjad.MarginMarkup(markup=abjad.Markup('spr.2'),),
+    abjad.MarginMarkup(markup=abjad.Markup('spr.3'),),
     abjad.MarginMarkup(markup=abjad.Markup('alt.1'),),
     abjad.MarginMarkup(markup=abjad.Markup('alt.2'),),
     abjad.MarginMarkup(markup=abjad.Markup('alt.3'),),
@@ -677,13 +798,17 @@ abbreviations = cyc([
     abjad.MarginMarkup(markup=abjad.Markup('ten.3'),),
     abjad.MarginMarkup(markup=abjad.Markup('bar.1'),),
     abjad.MarginMarkup(markup=abjad.Markup('bar.2'),),
-    abjad.MarginMarkup(markup=abjad.Markup('bs.'),),
+    abjad.MarginMarkup(markup=abjad.Markup('bar.3'),),
+    abjad.MarginMarkup(markup=abjad.Markup('bs.1'),),
+    abjad.MarginMarkup(markup=abjad.Markup('bs.2'),),
+    abjad.MarginMarkup(markup=abjad.Markup('cbs.'),),
 ])
 
 names = cyc([
     abjad.StartMarkup(markup=abjad.Markup('Sopranino'),),
     abjad.StartMarkup(markup=abjad.Markup('Soprano 1'),),
     abjad.StartMarkup(markup=abjad.Markup('Soprano 2'),),
+    abjad.StartMarkup(markup=abjad.Markup('Soprano 3'),),
     abjad.StartMarkup(markup=abjad.Markup('Alto 1'),),
     abjad.StartMarkup(markup=abjad.Markup('Alto 2'),),
     abjad.StartMarkup(markup=abjad.Markup('Alto 3'),),
@@ -692,7 +817,10 @@ names = cyc([
     abjad.StartMarkup(markup=abjad.Markup('Tenor 3'),),
     abjad.StartMarkup(markup=abjad.Markup('Baritone 1'),),
     abjad.StartMarkup(markup=abjad.Markup('Baritone 2'),),
-    abjad.StartMarkup(markup=abjad.Markup('Bass'),),
+    abjad.StartMarkup(markup=abjad.Markup('Baritone 3'),),
+    abjad.StartMarkup(markup=abjad.Markup('Bass 1'),),
+    abjad.StartMarkup(markup=abjad.Markup('Bass 2'),),
+    abjad.StartMarkup(markup=abjad.Markup('Contrabass'),),
 ])
 
 for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):

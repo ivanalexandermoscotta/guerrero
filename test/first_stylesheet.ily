@@ -3,7 +3,7 @@
 \version "2.19.82"
 \language "english"
 #(set-default-paper-size "11x17portrait")
-#(set-global-staff-size 15)
+#(set-global-staff-size 14)
 \include "ekmel.ily"
 \ekmelicStyle evans
 
@@ -12,7 +12,7 @@
 	breakbefore = ##t
 	title =  \markup \override #'(font-name . "Didot") \fontsize #15 \bold\center-column {"GUERRERO" }
 	subtitle = \markup \override #'(font-name . "Didot") {" "}
-	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #6 \center-column {"for twelve saxophones"}
+	subsubtitle = \markup \override #'(font-name . "Didot") \fontsize #6 \center-column {"for sixteen saxophones"}
 	arranger = \markup \override #'(font-name . "Didot") \fontsize #2.3 {"Gregory Rowland Evans"}
 }
 
