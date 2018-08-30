@@ -3,11 +3,11 @@
 
 #(set-default-paper-size "11x17landscape")
 #(set-global-staff-size 25)
-#(print-keys-verbose 'baritone-saxophone)
+#(print-keys-verbose 'saxophone (current-error-port))
 
 \relative c' {
   \textLengthOn
-  <ctqs' e dqs'>1_
+  <ctqs' e dqs'>1\ff_
   \markup {
     \center-column {
       soprano1
@@ -18,14 +18,14 @@
                   #'soprano-saxophone
                    #'( 
 			(cc . (one two three four six))
-			(lh . (T))
+			(lh . (ees d))
 			(rh . (low-c))
 			)
     }
   }
 
   \textLengthOn
-  <cs e d' >1_
+  <cs e d' >1\f_
   \markup {
     \center-column {
       soprano2
@@ -35,14 +35,14 @@
                   #'soprano-saxophone
                    #'( 
 			(cc . (one two three four six))
-			(lh . (T b))
+			(lh . (ees d b))
 			(rh . (low-c))
 			)
     }
   }
 
   \textLengthOn
-  <cqs etqf d'>1_
+  <cqs etqf d'>1\f_
   \markup {
     \center-column {
       soprano3
@@ -52,13 +52,13 @@
                   #'soprano-saxophone
                    #'( 
 			(cc . (one two three four five))
-			(lh . (T))
+			(lh . (ees d))
 			(rh . (low-c))
 			)
     }
   }
 
-  <cqs g' eqf' bf'>1_
+  <cqs g' eqf' bf'>1\ff_
   \markup {
     \center-column {
       alto1
@@ -68,13 +68,13 @@
                   #'alto-saxophone
                    #'( 
 			(cc . (one two three))
-			(lh . (TT gis))
+			(lh . (d gis))
 			(rh . ())
 			)
     }
   }
 
-  <cqs eqf dqf' >1_
+  <cqs eqf dqf' >1\mf_
   \markup {
     \center-column {
        alto2
@@ -89,7 +89,7 @@
 			)
     }
   }
-  <dqf, ctqs' atqs' ds fs>1_\markup {
+  <dqf, ctqs' atqs' ds fs>1\ff_\markup {
     \center-column {
       alto3
       " "
@@ -104,7 +104,7 @@
     }
   }
 
-  <fs fqs'>1_\markup {
+  <fs fqs'>1\mf_\markup {
     \center-column {
       tenor1
       " "
@@ -119,7 +119,7 @@
     }
   }
 
-  <fs fqs' ctqs' fs>1_\markup {
+  <fs fqs' ctqs' fs>1\mf_\markup {
     \center-column {
       tenor2
       " "
@@ -134,7 +134,7 @@
     }
   }
 
-  <fs fqs' ctqs' gqf'>1_\markup {
+  <fs fqs' ctqs' gqf'>1\mp_\markup {
     \center-column {
       tenor3
       " "
@@ -149,7 +149,7 @@
     }
   }
 
-  <ctqs' dtqs' aqs'>1_\markup {
+  <ctqs' dtqs' aqs'>1\ff_\markup {
     \center-column {
       baritone1
       " "
@@ -158,13 +158,13 @@
         #'baritone-saxophone
         #'( 
 			(cc . (one two three))
-			(lh . (T gis))
+			(lh . (ees d gis))
 			(rh . ())
 			)
     }
   }
 
-  <e, eqs' bqs'>1_\markup {
+  <e, eqs' bqs'>1\mf_\markup {
     \center-column {
       baritone2
       " "
@@ -179,7 +179,7 @@
     }
   }
 
-  <ftqs fqs' ctqs' as'>1_\markup {
+  <ftqs fqs' ctqs' as'>1\ff_\markup {
     \center-column {
       baritone3
       " "
@@ -193,4 +193,20 @@
 			)
     }
   }
+
+  c1_\markup {
+    \center-column {
+      TEST
+      " "
+		\override #'(size . 0.4)
+      \woodwind-diagram
+        #'saxophone
+        #'( 
+			(cc . (one two three four five six))
+			(lh . (ees d  ))
+			(rh . (e c bes high-fis fis ees low-c))
+			)
+    }
+  }
+
 }
