@@ -32,26 +32,7 @@ bounds = abjad.mathtools.cumulative_sums([_.duration for _ in time_signatures])
 #     beams=False,
 # ).make_basic_rhythm()
 
-rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
-    talea=abjadext.rmakers.Talea(
-        counts=[1, 1, 1, 5, 3, 2, 4],
-        denominator=16,
-        ),
-    beam_specifier=abjadext.rmakers.BeamSpecifier(
-        beam_divisions_together=True,
-        beam_rests=False,
-        ),
-    extra_counts_per_division=[0, 1, ],
-    burnish_specifier=abjadext.rmakers.BurnishSpecifier(
-        left_classes=[abjad.Rest],
-        left_counts=[1, 0, 1],
-        ),
-    tuplet_specifier=abjadext.rmakers.TupletSpecifier(
-        trivialize=True,
-        extract_trivial=True,
-        rewrite_rest_filled=True,
-        ),
-    )
+rmaker_one = abjadext.rmakers.NoteRhythmMaker()
 
 rmaker_two = abjadext.rmakers.TaleaRhythmMaker(
     talea=abjadext.rmakers.Talea(
@@ -711,22 +692,22 @@ def cyc(lst):
 
 scale = range(24)
 
-sopranino_scale = [((i / 2) + 17) for i in scale]
-soprano1_scale = [((i / 2) + 13) for i in scale]
-soprano2_scale = [((i / 2) + 9) for i in scale]
-soprano3_scale = [((i / 2) + 9) for i in scale]
-alto1_scale = [((i / 2) + 5) for i in scale]
-alto2_scale = [((i / 2) + 1) for i in scale]
-alto3_scale = [((i / 2) - 3) for i in scale]
-tenor1_scale = [((i / 2) - 7) for i in scale]
-tenor2_scale = [((i / 2) - 11) for i in scale]
-tenor3_scale = [((i / 2) - 15) for i in scale]
-baritone1_scale = [((i / 2) - 19) for i in scale]
-baritone2_scale = [((i / 2) - 23) for i in scale]
-baritone3_scale = [((i / 2) - 23) for i in scale]
-bass_scale1 = [((i / 2) - 27) for i in scale]
-bass_scale2 = [((i / 2) - 27) for i in scale]
-contrabass_scale = [((i / 2) - 27) for i in scale]
+sopranino_scale = [30]
+soprano1_scale = [20]
+soprano2_scale = [14]
+soprano3_scale = [11]
+alto1_scale = [11]
+alto2_scale = [3]
+alto3_scale = [-8]
+tenor1_scale = [3]
+tenor2_scale = [-8]
+tenor3_scale = [-15]
+baritone1_scale = [-8, 3, -8, -15]
+baritone2_scale = [-15, -8, 3, -8, -15, -17]
+baritone3_scale = [-17, -15, -8, 3, -8, -15]
+bass_scale1 = [-15, -8, -17, -8, -15, -17]
+bass_scale2 = [-17, -15, -8, -17, -8, -15]
+contrabass_scale = [-36, -31, -35, -26, -31, -35, -36]
 
 scales = [
     sopranino_scale,
@@ -877,3 +858,4 @@ if path.exists():
 
 # for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
 #     abjad.show(staff)
+# abjad.play(score)

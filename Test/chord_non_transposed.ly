@@ -37,7 +37,7 @@
                         \set Staff.instrumentName =
                         \markup { Sopranino }
                         \clef "treble"
-                        ds'''1
+                        fs'''1
                     }
                 }
             }
@@ -56,7 +56,7 @@
                         \set Staff.instrumentName =
                         \markup { "Soprano 1" }
                         \clef "treble"
-                        bf''1
+                        af''1
                     }
                 }
             }
@@ -75,7 +75,7 @@
                         \set Staff.instrumentName =
                         \markup { "Soprano 2" }
                         \clef "treble"
-                        e''1
+                        d''1
                     }
                 }
             }
@@ -94,7 +94,8 @@
                         \set Staff.instrumentName =
                         \markup { "Soprano 3" }
                         \clef "treble"
-                        cs''1                    }
+                        b'1
+                    }
                 }
             }
             \context Staff = "Staff 5"
@@ -112,7 +113,7 @@
                         \set Staff.instrumentName =
                         \markup { "Alto 1" }
                         \clef "treble"
-                        gs''1
+                        b'1
                     }
                 }
             }
@@ -131,7 +132,7 @@
                         \set Staff.instrumentName =
                         \markup { "Alto 2" }
                         \clef "treble"
-                        c''1
+                        ef'1
                     }
                 }
             }
@@ -150,7 +151,7 @@
                         \set Staff.instrumentName =
                         \markup { "Alto 3" }
                         \clef "treble"
-                        cs'1
+                        e1
                     }
                 }
             }
@@ -168,8 +169,8 @@
                         \markup { ten.1 }
                         \set Staff.instrumentName =
                         \markup { "Tenor 1" }
-                        \clef "treble"
-                        f''1
+                        \clef "bass"
+                        ef'1
                     }
                 }
             }
@@ -187,8 +188,8 @@
                         \markup { ten.2 }
                         \set Staff.instrumentName =
                         \markup { "Tenor 2" }
-                        \clef "treble"
-                        fs'1
+                        \clef "bass"
+                        e1
                     }
                 }
             }
@@ -206,8 +207,8 @@
                         \markup { ten.3 }
                         \set Staff.instrumentName =
                         \markup { "Tenor 3" }
-                        \clef "treble"
-                        b1
+                        \clef "bass"
+                        a,1
                     }
                 }
             }
@@ -225,8 +226,8 @@
                         \markup { bar.1 }
                         \set Staff.instrumentName =
                         \markup { "Baritone 1" }
-                        \clef "treble"
-                        cs''1
+                        \clef "bass"
+                        e1
                     }
                 }
             }
@@ -244,8 +245,8 @@
                         \markup { bar.2 }
                         \set Staff.instrumentName =
                         \markup { "Baritone 2" }
-                        \clef "treble"
-                        fs'1
+                        \clef "bass"
+                        a,1
                     }
                 }
             }
@@ -263,8 +264,8 @@
                         \markup { bar.3 }
                         \set Staff.instrumentName =
                         \markup { "Baritone 3" }
-                        \clef "treble"
-                        e'1
+                        \clef "bass"
+                        g,1
                     }
                 }
             }
@@ -282,8 +283,8 @@
                         \markup { bs.1 }
                         \set Staff.instrumentName =
                         \markup { "Bass 1" }
-                        \clef "treble"
-                        b'1
+                        \clef "bass"
+                        a,1
                     }
                 }
             }
@@ -301,8 +302,8 @@
                         \markup { bs.2 }
                         \set Staff.instrumentName =
                         \markup { "Bass 2" }
-                        \clef "treble"
-                        a'1
+                        \clef "bass"
+                        g,1
                     }
                 }
             }
@@ -320,8 +321,8 @@
                         \markup { cb. }
                         \set Staff.instrumentName =
                         \markup { Contrabass }
-                        \clef "treble"
-                        <<a1 bf1 d'1 g'1>>
+                        \clef "bass"
+                        <<c,,1 df,,1 f,,1 bf,,1>>
                     }
                 }
             }

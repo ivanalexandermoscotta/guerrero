@@ -94,6 +94,20 @@ voice_9_timespan_list = abjad.TimespanList([
     ]
 ])
 
+voice_13_timespan_list = abjad.TimespanList([
+    abjad.AnnotatedTimespan(
+        start_offset=start_offset,
+        stop_offset=stop_offset,
+        annotation=MusicSpecifier(
+            rhythm_maker=rhythm_maker,
+            voice_name='Voice 13',
+        ),
+    )
+    for start_offset, stop_offset, rhythm_maker in [
+        [0, 1, rmaker_one],
+    ]
+])
+
 voice_2_timespan_list = abjad.TimespanList([
     abjad.AnnotatedTimespan(
         start_offset=start_offset,
@@ -129,6 +143,20 @@ voice_10_timespan_list = abjad.TimespanList([
         annotation=MusicSpecifier(
             rhythm_maker=rhythm_maker,
             voice_name='Voice 10',
+        ),
+    )
+    for start_offset, stop_offset, rhythm_maker in [
+        [0, 1, rmaker_one],
+    ]
+])
+
+voice_14_timespan_list = abjad.TimespanList([
+    abjad.AnnotatedTimespan(
+        start_offset=start_offset,
+        stop_offset=stop_offset,
+        annotation=MusicSpecifier(
+            rhythm_maker=rhythm_maker,
+            voice_name='Voice 14',
         ),
     )
     for start_offset, stop_offset, rhythm_maker in [
@@ -178,6 +206,20 @@ voice_11_timespan_list = abjad.TimespanList([
     ]
 ])
 
+voice_15_timespan_list = abjad.TimespanList([
+    abjad.AnnotatedTimespan(
+        start_offset=start_offset,
+        stop_offset=stop_offset,
+        annotation=MusicSpecifier(
+            rhythm_maker=rhythm_maker,
+            voice_name='Voice 15',
+        ),
+    )
+    for start_offset, stop_offset, rhythm_maker in [
+        [0, 1, rmaker_one],
+    ]
+])
+
 voice_4_timespan_list = abjad.TimespanList([
     abjad.AnnotatedTimespan(
         start_offset=start_offset,
@@ -220,6 +262,20 @@ voice_12_timespan_list = abjad.TimespanList([
     ]
 ])
 
+voice_16_timespan_list = abjad.TimespanList([
+    abjad.AnnotatedTimespan(
+        start_offset=start_offset,
+        stop_offset=stop_offset,
+        annotation=MusicSpecifier(
+            rhythm_maker=rhythm_maker,
+            voice_name='Voice 16',
+        ),
+    )
+    for start_offset, stop_offset, rhythm_maker in [
+        [0, 1, rmaker_one],
+    ]
+])
+
 # Create a dictionary mapping voice names to timespan lists so we can
 # maintain the association in later operations:
 
@@ -236,6 +292,10 @@ all_timespan_lists = {
     'Voice 10': voice_10_timespan_list,
     'Voice 11': voice_11_timespan_list,
     'Voice 12': voice_12_timespan_list,
+    'Voice 13': voice_13_timespan_list,
+    'Voice 14': voice_14_timespan_list,
+    'Voice 15': voice_15_timespan_list,
+    'Voice 16': voice_16_timespan_list,
 }
 
 # Determine the "global" timespan of all voices combined:
@@ -311,6 +371,10 @@ score = abjad.Score([
             abjad.Staff([abjad.Voice(name='Voice 10')],name='Staff 10', lilypond_type='Staff',),
             abjad.Staff([abjad.Voice(name='Voice 11')],name='Staff 11', lilypond_type='Staff',),
             abjad.Staff([abjad.Voice(name='Voice 12')],name='Staff 12', lilypond_type='Staff',),
+            abjad.Staff([abjad.Voice(name='Voice 13')],name='Staff 13', lilypond_type='Staff',),
+            abjad.Staff([abjad.Voice(name='Voice 14')],name='Staff 14', lilypond_type='Staff',),
+            abjad.Staff([abjad.Voice(name='Voice 15')],name='Staff 15', lilypond_type='Staff',),
+            abjad.Staff([abjad.Voice(name='Voice 16')],name='Staff 16', lilypond_type='Staff',),
         ],
         name='Staff Group',
     )
@@ -421,23 +485,28 @@ def cyc(lst):
         yield lst[count%len(lst)]
         count += 1
 
-sopranino_scale = [42]
-soprano1_scale = [32]
-soprano2_scale = [26]
-alto1_scale = [23]
-alto2_scale = [15]
-alto3_scale = [4]
-tenor1_scale = [-3]
-tenor2_scale = [-5]
-tenor3_scale = [-14]
-baritone1_scale = [-19]
-baritone2_scale = [-23]
-bass_scale = [-24]
+sopranino_scale = [30]
+soprano1_scale = [20]
+soprano2_scale = [14]
+soprano3_scale = [11]
+alto1_scale = [11]
+alto2_scale = [3]
+alto3_scale = [-8]
+tenor1_scale = [3]
+tenor2_scale = [-8]
+tenor3_scale = [-15]
+baritone1_scale = [-8]
+baritone2_scale = [-15]
+baritone3_scale = [-17]
+bass1_scale = [-15]
+bass2_scale = [-17]
+contrabass_scale = [-36]
 
 scales = [
     sopranino_scale,
     soprano1_scale,
     soprano2_scale,
+    soprano3_scale,
     alto1_scale,
     alto2_scale,
     alto3_scale,
@@ -446,7 +515,10 @@ scales = [
     tenor3_scale,
     baritone1_scale,
     baritone2_scale,
-    bass_scale,
+    baritone3_scale,
+    bass1_scale,
+    bass2_scale,
+    contrabass_scale,
 ]
 
 staffs = [staff for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff)]
@@ -468,21 +540,26 @@ instruments = cyc([
     abjad.SopraninoSaxophone(),
     abjad.SopranoSaxophone(),
     abjad.SopranoSaxophone(),
+    abjad.SopranoSaxophone(),
     abjad.AltoSaxophone(),
     abjad.AltoSaxophone(),
     abjad.AltoSaxophone(),
     abjad.TenorSaxophone(),
     abjad.TenorSaxophone(),
     abjad.TenorSaxophone(),
+    abjad.BaritoneSaxophone(),
     abjad.BaritoneSaxophone(),
     abjad.BaritoneSaxophone(),
     abjad.BassSaxophone(),
+    abjad.BassSaxophone(),
+    abjad.ContrabassSaxophone(),
 ])
 
 abbreviations = cyc([
     abjad.MarginMarkup(markup=abjad.Markup('spro.'),),
     abjad.MarginMarkup(markup=abjad.Markup('spr.1'),),
     abjad.MarginMarkup(markup=abjad.Markup('spr.2'),),
+    abjad.MarginMarkup(markup=abjad.Markup('spr.3'),),
     abjad.MarginMarkup(markup=abjad.Markup('alt.1'),),
     abjad.MarginMarkup(markup=abjad.Markup('alt.2'),),
     abjad.MarginMarkup(markup=abjad.Markup('alt.3'),),
@@ -491,13 +568,17 @@ abbreviations = cyc([
     abjad.MarginMarkup(markup=abjad.Markup('ten.3'),),
     abjad.MarginMarkup(markup=abjad.Markup('bar.1'),),
     abjad.MarginMarkup(markup=abjad.Markup('bar.2'),),
-    abjad.MarginMarkup(markup=abjad.Markup('bs.'),),
+    abjad.MarginMarkup(markup=abjad.Markup('bar.3'),),
+    abjad.MarginMarkup(markup=abjad.Markup('bs.1'),),
+    abjad.MarginMarkup(markup=abjad.Markup('bs.2'),),
+    abjad.MarginMarkup(markup=abjad.Markup('cb.'),),
 ])
 
 names = cyc([
     abjad.StartMarkup(markup=abjad.Markup('Sopranino'),),
     abjad.StartMarkup(markup=abjad.Markup('Soprano 1'),),
     abjad.StartMarkup(markup=abjad.Markup('Soprano 2'),),
+    abjad.StartMarkup(markup=abjad.Markup('Soprano 3'),),
     abjad.StartMarkup(markup=abjad.Markup('Alto 1'),),
     abjad.StartMarkup(markup=abjad.Markup('Alto 2'),),
     abjad.StartMarkup(markup=abjad.Markup('Alto 3'),),
@@ -506,20 +587,40 @@ names = cyc([
     abjad.StartMarkup(markup=abjad.Markup('Tenor 3'),),
     abjad.StartMarkup(markup=abjad.Markup('Baritone 1'),),
     abjad.StartMarkup(markup=abjad.Markup('Baritone 2'),),
-    abjad.StartMarkup(markup=abjad.Markup('Bass'),),
+    abjad.StartMarkup(markup=abjad.Markup('Baritone 3'),),
+    abjad.StartMarkup(markup=abjad.Markup('Bass 1'),),
+    abjad.StartMarkup(markup=abjad.Markup('Bass 2'),),
+    abjad.StartMarkup(markup=abjad.Markup('Contrabass'),),
 ])
 
-clef = abjad.Clef('bass')
+# clefs = cyc([
+#     abjad.Clef('treble'),
+#     abjad.Clef('treble'),
+#     abjad.Clef('treble'),
+#     abjad.Clef('treble'),
+#     abjad.Clef('treble'),
+#     abjad.Clef('treble'),
+#     abjad.Clef('treble'),
+#     abjad.Clef('bass'),
+#     abjad.Clef('bass'),
+#     abjad.Clef('bass'),
+#     abjad.Clef('bass'),
+#     abjad.Clef('bass'),
+#     abjad.Clef('bass'),
+#     abjad.Clef('bass'),
+#     abjad.Clef('bass'),
+#     abjad.Clef('bass'),
+# ])
 
 for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[0]
     abjad.attach(next(instruments), leaf1)
     abjad.attach(next(abbreviations), leaf1)
     abjad.attach(next(names), leaf1)
-    abjad.attach(clef, leaf1)
+    # abjad.attach(next(clefs), leaf1)
 
-# for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
-#     abjad.Instrument.transpose_from_sounding_pitch(staff)
+for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
+    abjad.Instrument.transpose_from_sounding_pitch(staff)
 
 # Make a lilypond file and show it:
 
