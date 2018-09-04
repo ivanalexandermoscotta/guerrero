@@ -3,7 +3,7 @@
 
 #(set-default-paper-size "11x17landscape")
 #(set-global-staff-size 25)
-#(print-keys-verbose 'saxophone (current-error-port))
+#(print-keys-verbose 'baritone-saxophone (current-error-port))
 
 \relative c' {
   \textLengthOn
@@ -196,14 +196,14 @@
 
   c1_\markup {
     \center-column {
-      TEST
+      ALL_KEYS
       " "
 		\override #'(size . 0.4)
       \woodwind-diagram
-        #'saxophone
+        #'baritone-saxophone
         #'( 
 			(cc . (one two three four five six))
-			(lh . (ees d  ))
+			(lh . (low-a T ees d f front-f bes gis cis b low-bes))
 			(rh . (e c bes high-fis fis ees low-c))
 			)
     }
