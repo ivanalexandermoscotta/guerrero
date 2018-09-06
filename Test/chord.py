@@ -4,7 +4,7 @@ import os
 import pathlib
 import time
 import abjadext.rmakers
-#from TaleaMusicMaker import TaleaMusicMaker
+from TaleaMusicMaker import TaleaMusicMaker
 
 print('Interpreting file ...')
 
@@ -20,16 +20,16 @@ bounds = abjad.mathtools.cumulative_sums([_.duration for _ in time_signatures])
 
 # Define rhythm-makers: two for actual music, one for silence.
 
-# musicmaker_one = TaleaMusicMaker(
-#     counts=[2, 2, 5, 3, 1, 1, 3, 1],
-#     denominator=8,
-#     pitches=[0],
-#     clef='percussion',
-#     extra_counts_per_division=[1, 0, 0, 1, 0, 3, 0, 0],
-#     mask_indices=[0],
-#     mask_period=0,
-#     beams=False,
-# ).make_basic_rhythm()
+musicmaker_one = TaleaMusicMaker(
+    counts=[2, 2, 5, 3, 1, 1, 3, 1],
+    denominator=8,
+    pitches=[0],
+    clef='percussion',
+    extra_counts_per_division=[1, 0, 0, 1, 0, 3, 0, 0],
+    mask_indices=[0],
+    mask_period=0,
+    beams=False,
+).make_music()
 
 rmaker_one = abjadext.rmakers.NoteRhythmMaker()
 
@@ -62,7 +62,7 @@ voice_1_timespan_list = abjad.TimespanList([
         ),
     )
     for start_offset, stop_offset, rhythm_maker in [
-        [0, 1, rmaker_one],
+        [0, 1, musicmaker_one],
     ]
 ])
 

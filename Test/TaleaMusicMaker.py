@@ -37,10 +37,10 @@ class TaleaMusicMaker:
 
     def make_basic_rhythm(self, durations):
 
-        talea = rmakers.Talea(
-            counts = self.counts,
-            denominator=self.denominator,
-            )
+        # talea = rmakers.Talea(
+        #     counts = self.counts,
+        #     denominator=self.denominator,
+        #     )
         beam_specifier = rmakers.BeamSpecifier(
             beam_divisions_together=self.beams,
             beam_each_division=self.beams,
@@ -61,7 +61,10 @@ class TaleaMusicMaker:
             rewrite_rest_filled=True,
             )
         talea_rhythm_maker(
-            talea=talea,
+            talea=rmakers.Talea(
+                counts = self.counts,
+                denominator=self.denominator,
+                ),
             beam_specifier=beam_specifier,
             extra_counts_per_division=self.extra_counts_per_division,
             division_masks=division_masks,
