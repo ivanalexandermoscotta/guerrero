@@ -29,7 +29,8 @@ class TaleaMusicMaker:
         #self.tag=tag
 
     def __call__(self, durations, previous_state):
-        return self.make_music(durations, previous_state)
+        state = previous_state
+        return self.make_music(durations)
 
     def _cyclic_pitches(self, pitches):
         c = 0

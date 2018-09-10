@@ -27,7 +27,7 @@ musicmaker_one = TaleaMusicMaker(
     clef='percussion',
     extra_counts_per_division=[1, 0, 0, 1, 0, 3, 0, 0],
     mask_indices=[0],
-    mask_period=0,
+    mask_period=1,
     beams=False,
 )
 
