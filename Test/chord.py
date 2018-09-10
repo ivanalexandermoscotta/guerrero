@@ -29,7 +29,7 @@ musicmaker_one = TaleaMusicMaker(
     mask_indices=[0],
     mask_period=0,
     beams=False,
-).make_music()
+)
 
 rmaker_one = abjadext.rmakers.NoteRhythmMaker()
 
