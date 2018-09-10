@@ -358,23 +358,13 @@ for voice_name, timespan_list in all_timespan_lists.items():
 score = abjad.Score([
     abjad.Staff(lilypond_type='TimeSignatureContext', name='Global Context'),
     abjad.StaffGroup(
-        [
-            abjad.Staff([abjad.Voice(name='Voice 1')],name='Staff 1', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 2')],name='Staff 2', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 3')],name='Staff 3', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 4')],name='Staff 4', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 5')],name='Staff 5', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 6')],name='Staff 6', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 7')],name='Staff 7', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 8')],name='Staff 8', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 9')],name='Staff 9', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 10')],name='Staff 10', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 11')],name='Staff 11', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 12')],name='Staff 12', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 13')],name='Staff 13', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 14')],name='Staff 14', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 15')],name='Staff 15', lilypond_type='Staff',),
-            abjad.Staff([abjad.Voice(name='Voice 16')],name='Staff 16', lilypond_type='Staff',),
+        [abjad.Staff(
+            [abjad.Voice(
+                name='Voice {}'.format(n))
+            ],
+            name='Staff {}'.format(n),
+            lilypond_type='Staff')
+                for n in range(1, 16+1)
         ],
         name='Staff Group',
     )
@@ -402,7 +392,8 @@ print('Making containers ...')
 def make_container(rhythm_maker, durations):
     state=rhythm_maker.state
     selections = rhythm_maker(durations, previous_state=state)
-    container = abjad.Container(selections)
+    container = abjad.Container()
+    container.extend(selections)
     # # Add analysis brackets so we can see the phrasing graphically
     # start_indicator = abjad.LilyPondLiteral('\startGroup', format_slot='after')
     # stop_indicator = abjad.LilyPondLiteral('\stopGroup', format_slot='after')
@@ -555,43 +546,47 @@ instruments = cyc([
     abjad.ContrabassSaxophone(),
 ])
 
-abbreviations = cyc([
-    abjad.MarginMarkup(markup=abjad.Markup('spro.'),),
-    abjad.MarginMarkup(markup=abjad.Markup('spr.1'),),
-    abjad.MarginMarkup(markup=abjad.Markup('spr.2'),),
-    abjad.MarginMarkup(markup=abjad.Markup('spr.3'),),
-    abjad.MarginMarkup(markup=abjad.Markup('alt.1'),),
-    abjad.MarginMarkup(markup=abjad.Markup('alt.2'),),
-    abjad.MarginMarkup(markup=abjad.Markup('alt.3'),),
-    abjad.MarginMarkup(markup=abjad.Markup('ten.1'),),
-    abjad.MarginMarkup(markup=abjad.Markup('ten.2'),),
-    abjad.MarginMarkup(markup=abjad.Markup('ten.3'),),
-    abjad.MarginMarkup(markup=abjad.Markup('bar.1'),),
-    abjad.MarginMarkup(markup=abjad.Markup('bar.2'),),
-    abjad.MarginMarkup(markup=abjad.Markup('bar.3'),),
-    abjad.MarginMarkup(markup=abjad.Markup('bs.1'),),
-    abjad.MarginMarkup(markup=abjad.Markup('bs.2'),),
-    abjad.MarginMarkup(markup=abjad.Markup('cb.'),),
-])
+abbreviations = cyc([abjad.MarginMarkup(markup=abjad.Markup(abbrev))
+    for abbrev in (
+        'spro.',
+        'spr.1',
+        'spr.2',
+        'spr.3',
+        'alt.1',
+        'alt.2',
+        'alt.3',
+        'ten.1',
+        'ten.2',
+        'ten.3',
+        'bar.1',
+        'bar.2',
+        'bar.3',
+        'bs.1',
+        'bs.2',
+        'cb.'
+        )
+    ])
 
-names = cyc([
-    abjad.StartMarkup(markup=abjad.Markup('Sopranino'),),
-    abjad.StartMarkup(markup=abjad.Markup('Soprano 1'),),
-    abjad.StartMarkup(markup=abjad.Markup('Soprano 2'),),
-    abjad.StartMarkup(markup=abjad.Markup('Soprano 3'),),
-    abjad.StartMarkup(markup=abjad.Markup('Alto 1'),),
-    abjad.StartMarkup(markup=abjad.Markup('Alto 2'),),
-    abjad.StartMarkup(markup=abjad.Markup('Alto 3'),),
-    abjad.StartMarkup(markup=abjad.Markup('Tenor 1'),),
-    abjad.StartMarkup(markup=abjad.Markup('Tenor 2'),),
-    abjad.StartMarkup(markup=abjad.Markup('Tenor 3'),),
-    abjad.StartMarkup(markup=abjad.Markup('Baritone 1'),),
-    abjad.StartMarkup(markup=abjad.Markup('Baritone 2'),),
-    abjad.StartMarkup(markup=abjad.Markup('Baritone 3'),),
-    abjad.StartMarkup(markup=abjad.Markup('Bass 1'),),
-    abjad.StartMarkup(markup=abjad.Markup('Bass 2'),),
-    abjad.StartMarkup(markup=abjad.Markup('Contrabass'),),
-])
+names = cyc([abjad.StartMarkup(markup=abjad.Markup(name))
+    for name in (
+        'Sopranino',
+        'Soprano 1',
+        'Soprano 2',
+        'Soprano 3',
+        'Alto 1',
+        'Alto 2',
+        'Alto 3',
+        'Tenor 1',
+        'Tenor 2',
+        'Tenor 3',
+        'Baritone 1',
+        'Baritone 2',
+        'Baritone 3',
+        'Bass 1',
+        'Bass 2',
+        'Contrabass',
+        )
+    ])
 
 # clefs = cyc([
 #     abjad.Clef('treble'),
@@ -629,30 +624,30 @@ score_file = abjad.LilyPondFile.new(
     includes=['first_stylesheet.ily'],
     )
 # Comment measure numbers
-abjad.SegmentMaker.comment_measure_numbers(score)
+# abjad.SegmentMaker.comment_measure_numbers(score) 
 ###################
 
 #print(format(score_file))
-directory = '/Users/evansdsg2/Scores/guerrero/Test'
-pdf_path = f'{directory}/chord.pdf'
-path = pathlib.Path('chord.pdf')
-if path.exists():
-    print(f'Removing {pdf_path} ...')
-    path.unlink()
-time_1 = time.time()
-print(f'Persisting {pdf_path} ...')
-result = abjad.persist(score_file).as_pdf(pdf_path)
-print(result[0])
-print(result[1])
-print(result[2])
-success = result[3]
-if success is False:
-        print('LilyPond failed!')
-time_2 = time.time()
-total_time = time_2 - time_1
-print(f'Total time: {total_time} seconds')
-if path.exists():
-    print(f'Opening {pdf_path} ...')
-    os.system(f'open {pdf_path}')
+# directory = '/Users/evansdsg2/Scores/guerrero/Test'
+# pdf_path = f'{directory}/chord.pdf'
+# path = pathlib.Path('chord.pdf')
+# if path.exists():
+#     print(f'Removing {pdf_path} ...')
+#     path.unlink()
+# time_1 = time.time()
+# print(f'Persisting {pdf_path} ...')
+# result = abjad.persist(score_file).as_pdf(pdf_path)
+# print(result[0])
+# print(result[1])
+# print(result[2])
+# success = result[3]
+# if success is False:
+#         print('LilyPond failed!')
+# time_2 = time.time()
+# total_time = time_2 - time_1
+# print(f'Total time: {total_time} seconds')
+# if path.exists():
+#     print(f'Opening {pdf_path} ...')
+#     os.system(f'open {pdf_path}')
 
-# abjad.show(score)
+abjad.show(score)

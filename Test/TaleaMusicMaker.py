@@ -59,12 +59,13 @@ class TaleaMusicMaker:
                 indices=self.mask_indices,
                 period=self.mask_period)
             )
+        
         tuplet_specifier = rmakers.TupletSpecifier(
             trivialize=True,
             extract_trivial=True,
             rewrite_rest_filled=True,
             )
-        talea_rhythm_maker(
+        talea_rhythm_maker = rmakers.TaleaRhythmMaker(
             talea=rmakers.Talea(
                 counts = self.counts,
                 denominator=self.denominator,
