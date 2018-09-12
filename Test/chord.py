@@ -13,24 +13,31 @@ print('Interpreting file ...')
 time_signatures = [
     abjad.TimeSignature(pair) for pair in [
         (4, 4),
-    ]
+        
+    ] * 3
 ]
 
 bounds = abjad.mathtools.cumulative_sums([_.duration for _ in time_signatures])
 
 # Define rhythm-makers: two for actual music, one for silence.
 
-musicmaker_one = TaleaMusicMaker(
-    counts=[2, 2, 5, 3, 1, 1, 3, 1],
-    denominator=8,
-    pitches=[0],
-    clef='percussion',
+# musicmaker_one = TaleaMusicMaker(
+#     counts=[2, 2, 5, 3, 1, 1, 3, 1],
+#     denominator=8,
+#     pitches=[0],
+#     clef='percussion',
+#     extra_counts_per_division=[1, 0, 0, 1, 0, 3, 0, 0],
+#     mask_indices=[0],
+#     mask_period=8,
+#     beams=False,
+# )
+musicmaker_one = abjadext.rmakers.TaleaRhythmMaker(
+    talea=abjadext.rmakers.Talea(
+        counts=[2, 2, 5, 3, 1, 1, 3, 1],
+        denominator=8,
+    ),
     extra_counts_per_division=[1, 0, 0, 1, 0, 3, 0, 0],
-    mask_indices=[0],
-    mask_period=1,
-    beams=False,
 )
-
 rmaker_one = abjadext.rmakers.NoteRhythmMaker()
 
 
@@ -63,6 +70,7 @@ voice_1_timespan_list = abjad.TimespanList([
     )
     for start_offset, stop_offset, rhythm_maker in [
         [0, 1, musicmaker_one],
+        [2, 3, musicmaker_one],
     ]
 ])
 
@@ -392,8 +400,8 @@ print('Making containers ...')
 def make_container(rhythm_maker, durations):
     state=rhythm_maker.state
     selections = rhythm_maker(durations, previous_state=state)
-    container = abjad.Container()
-    container.extend(selections)
+    container = abjad.Container(selections)
+    # container.extend(selections)
     # # Add analysis brackets so we can see the phrasing graphically
     # start_indicator = abjad.LilyPondLiteral('\startGroup', format_slot='after')
     # stop_indicator = abjad.LilyPondLiteral('\stopGroup', format_slot='after')
@@ -424,7 +432,7 @@ def key_function(timespan):
 
     If the annotation's rhythm-maker is None, return the silence maker.
     """
-    return timespan.annotation.rhythm_maker or silence_maker
+    return timespan.annotation.rhythm_maker or rmaker_one
 
 for voice_name, timespan_list in all_timespan_lists.items():
     for rhythm_maker, grouper in itertools.groupby(
@@ -629,6 +637,7 @@ score_file = abjad.LilyPondFile.new(
 
 #print(format(score_file))
 # directory = '/Users/evansdsg2/Scores/guerrero/Test'
+# directory = '/Users/ivanmoscotta/Scores/guerrero/Test'
 # pdf_path = f'{directory}/chord.pdf'
 # path = pathlib.Path('chord.pdf')
 # if path.exists():
