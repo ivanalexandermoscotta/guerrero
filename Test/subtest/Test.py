@@ -4,8 +4,7 @@ import os
 import pathlib
 import time
 import abjadext.rmakers
-from MusicMaker import MusicMakerTalea
-from MusicMaker_2 import MusicMaker
+from MusicMaker import MusicMaker
 
 print('Interpreting file ...')
 
