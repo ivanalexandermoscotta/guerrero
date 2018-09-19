@@ -10,14 +10,16 @@ class TaleaMusicMaker:
         self,
         counts,
         denominator,
-        mask_indices,
-        mask_period,
         pitches,
+        burnish_specifier=None,
         extra_counts_per_division=[0],
+        mask_indices=None,
+        mask_period=None,
         beams=False,
         clef='treble',
         #tag='None',
         ):
+        self.burnish_specifier=burnish_specifier
         self.counts = counts
         self.denominator = denominator
         self.extra_counts_per_division=extra_counts_per_division
@@ -40,48 +42,46 @@ class TaleaMusicMaker:
             c = c + 1
 
     def make_basic_rhythm(self, durations):
-
-        # talea = rmakers.Talea(
-        #     counts = self.counts,
-        #     denominator=self.denominator,
-        #     )
+        talea = rmakers.Talea(
+            counts = self.counts,
+            denominator=self.denominator,
+            )
         beam_specifier = rmakers.BeamSpecifier(
             beam_divisions_together=self.beams,
             beam_each_division=self.beams,
             beam_rests=self.beams,
             )
+
         # burnish_specifier=abjadext.rmakers.BurnishSpecifier(
         #     left_classes=[abjad.Rest],
         #     left_counts=[1, 0, 1],
         #     )
-        division_masks = rmakers.SilenceMask(
-            pattern = abjad.Pattern(
-                indices=self.mask_indices,
-                period=self.mask_period)
-            )
-        
+        if self.mask_indices or self.mask_period == None:
+            division_masks = None
+        else:
+            division_masks = rmakers.SilenceMask(
+                pattern = abjad.Pattern(
+                    indices=self.mask_indices,
+                    period=self.mask_period,
+                    )
+                )
         tuplet_specifier = rmakers.TupletSpecifier(
             trivialize=True,
             extract_trivial=True,
             rewrite_rest_filled=True,
             )
         talea_rhythm_maker = rmakers.TaleaRhythmMaker(
-            talea=rmakers.Talea(
-                counts = self.counts,
-                denominator=self.denominator,
-                ),
+            talea=talea,
             beam_specifier=beam_specifier,
             extra_counts_per_division=self.extra_counts_per_division,
             division_masks=division_masks,
             tuplet_specifier=tuplet_specifier,
+            burnish_specifier=self.burnish_specifier
             #tag=self.tag,
             )
 
         selections = talea_rhythm_maker(durations)
-
-        music = abjad.Staff(selections)
-
-        music = self._apply_pitches(music)
+        music = self._apply_pitches(selections)
 
         return music
 
@@ -113,13 +113,6 @@ class TaleaMusicMaker:
         music = self.make_basic_rhythm(
             durations,
             )
-        shards = abjad.mutate(music[:]).split(durations)
-        beam_specifier = rmakers.BeamSpecifier(
-            beam_divisions_together=self.beams,
-            beam_each_division=self.beams,
-            beam_rests=self.beams,
-            )
-
         # music = self.add_attachments(music)
 
         return music
