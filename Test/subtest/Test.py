@@ -5,6 +5,9 @@ import pathlib
 import time
 import abjadext.rmakers
 from MusicMaker import MusicMaker
+from AttachmentHandler import AttachmentHandler
+
+
 
 print('Interpreting file ...')
 
@@ -63,16 +66,25 @@ rmaker_002 = abjadext.rmakers.TaleaRhythmMaker(
         ),
     )
 
+attachment_handler = AttachmentHandler(
+    starting_dynamic='mf',
+    ending_dynamic='ff',
+    trend='o<',
+    articulation=abjad.Staccato()
+)
+
 # Initialize two MusicMakers with the rhythm-makers. 
 
 rmaker_one = MusicMaker(
     rmaker=rmaker_001,
     pitches=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     continuous=True,
+    attachment_handler=attachment_handler
 )
 rmaker_two = MusicMaker(
     rmaker=rmaker_002,
-    continuous=True
+    continuous=True,
+    attachment_handler=attachment_handler
 )
 
 silence_maker = abjadext.rmakers.NoteRhythmMaker(
@@ -800,6 +812,7 @@ score_file = abjad.LilyPondFile.new(
     score,
     includes=['first_stylesheet.ily'],
     )
+print("Made score_file")
 # Comment measure numbers - this function is in the baca.SegmentMaker, not abjad.SegmentMaker
 # abjad.SegmentMaker.comment_measure_numbers(score)
 ###################
@@ -829,4 +842,5 @@ score_file = abjad.LilyPondFile.new(
 
 # for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
 #     abjad.show(staff)
+print("Showing Score")
 abjad.show(score)
