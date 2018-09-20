@@ -18,6 +18,9 @@ class MusicMaker:
     
     def __call__(self, durations):
         return self._make_music(durations)
+    
+    def _add_attachments(self, selections):
+        self.attachment_handler(selections)
 
     def _make_basic_rhythm(self, durations):
         selections = self.rmaker(durations, previous_state=self._state)
@@ -27,10 +30,10 @@ class MusicMaker:
     def _make_music(self, durations):
         selections = self._make_basic_rhythm(durations)
         if self.pitches == None:
-            selections = self.attachment_handler.add_attachments(selections)
+            self._add_attachments(selections)
             return selections
         selections = self._apply_pitches(selections, self.pitches)
-        selections = self.attachment_handler(selections)
+        self._add_attachments(selections)
         return selections
 
     def _collect_pitches_durations_leaves(self, logical_ties, pitches):
