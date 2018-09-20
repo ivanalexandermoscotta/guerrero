@@ -4,10 +4,12 @@ import abjad
 class MusicMaker:
     def __init__(
         self,
+        attachment_handler,
         rmaker,
         pitches=None,
         continuous=False,
     ):
+        self.attachment_handler = attachment_handler
         self.rmaker = rmaker
         self.pitches = pitches
         self.continuous = continuous
@@ -25,8 +27,10 @@ class MusicMaker:
     def _make_music(self, durations):
         selections = self._make_basic_rhythm(durations)
         if self.pitches == None:
+            selections = self.attachment_handler.add_attachments(selections)
             return selections
         selections = self._apply_pitches(selections, self.pitches)
+        selections = self.attachment_handler(selections)
         return selections
 
     def _collect_pitches_durations_leaves(self, logical_ties, pitches):
@@ -60,3 +64,4 @@ class MusicMaker:
             parent = abjad.inspect(old_leaf).parentage().parent
             parent[parent.index(old_leaf)] = new_leaf
         return [container[:]]
+
